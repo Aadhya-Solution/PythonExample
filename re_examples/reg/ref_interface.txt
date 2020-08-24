@@ -1,0 +1,15 @@
+this[0] = "FastEthernet0/0";
+ this[1] = "FastEthernet0/1";
+ this[2] = "Serial2/0";
+ this[3] = "Serial2/1";
+ this[4] = "Serial3/0";
+ this[5] = "Serial3/0.1:9";
+ this[6] = "Serial3/1";
+ this[7] = "Tunnel0";
+ this[8] = "Tunnel1";
+ this[9] = "Tunnel2";
+ this[10] = "Tunnel3";
+ this[11] = "Virtual-Access1";
+ this[12] = "Virtual-Template1";
+ this[13] = "vmi1";
+ this[14] = "vmi2";

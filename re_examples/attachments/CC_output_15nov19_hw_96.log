@@ -1,0 +1,143 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2019.11.15 12:17:07 =~=~=~=~=~=~=~=~=~=~=~=
+
+ffmpeg version 4.1 Copyright (c) 2000-2018 the FFmpeg developers
+  built with gcc 5.4.0 (Ubuntu 5.4.0-6ubuntu1~16.04.10) 20160609
+  configuration: --prefix=/root/ffmpeg_build --pkg-config-flags=--static --extra-cflags=-I/root/ffmpeg_build/include --extra-ldflags=-L/root/ffmpeg_build/lib --extra-libs='-lpthread -lm' --bindir=/root/bin --enable-gpl --enable-openssl --enable-nonfree --enable-libdrm --disable-doc --disable-htmlpages --disable-manpages --disable-podpages --disable-txtpages --enable-libx264 --enable-libx265 --enable-librdkafka --enable-libjson_c --enable-libinference_engine_c_api
+  libavutil      56. 22.100 / 56. 22.100
+  libavcodec     58. 35.100 / 58. 35.100
+  libavformat    58. 20.100 / 58. 20.100
+  libavdevice    58.  5.100 / 58.  5.100
+  libavfilter     7. 40.101 /  7. 40.101
+  libswscale      5.  3.100 /  5.  3.100
+  libswresample   3.  3.100 /  3.  3.100
+  libpostproc    55.  3.100 / 55.  3.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '2min_videos/car-detection_1920_1080_2min.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf58.20.100
+  Duration: 00:02:00.81, start: 0.000000, bitrate: 12591 kb/s
+    Stream #0:0(eng): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709), 1920x1080 [SAR 1:1 DAR 16:9], 12583 kb/s, 29.94 fps, 29.97 tbr, 30k tbn, 59.94 tbc (default)
+    Metadata:
+      handler_name    : ?Mainconcept Video Media Handler
+    Stream #0:1(eng): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 2 kb/s (default)
+    Metadata:
+      handler_name    : #Mainconcept MP4 Sound Media Handler
+File '1_out.json' already exists. Overwrite ? [y/N] y
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> wrapped_avframe (native))
+Press [q] to stop, [?] for help
+Loading model: device=HDDL, path=open_model_zoo/tools/downloader/Transportation/object_detection/vehicle/mobilenet-reduced-ssd/dldt/FP16/vehicle-detection-adas-0002.xml
+Setting batch_size=1, nireq=48
+Color Format:"BGR"
+labels: background vehicle 
+Avail devices: CPU GPU 
+device = HDDL
+[06:43:16.0849][22243]I[ServiceStarter.cpp:40] Info: Waiting for HDDL Service getting ready ...
+[06:43:16.0850][22243]I[ServiceStarter.cpp:45] Info: Found HDDL Service is running.
+[HDDLPlugin] [06:43:16.0852][22243]I[HddlClient.cpp:256] Hddl api version: 2.2
+[HDDLPlugin] [06:43:16.0852][22243]I[HddlClient.cpp:259] Info: Create Dispatcher2.
+[HDDLPlugin] [06:43:16.0856][22266]I[Dispatcher2.cpp:148] Info: SenderRoutine starts.
+[HDDLPlugin] [06:43:16.0856][22243]I[HddlClient.cpp:270] Info: RegisterClient HDDLPlugin.
+[HDDLPlugin] [06:43:16.0860][22243]I[HddlClient.cpp:275] Client Id: 3
+[HDDLPlugin] [06:43:21.0425][22243]I[HddlBlob.cpp:166] Info: HddlBlob initialize ion ...
+[HDDLPlugin] [06:43:21.0426][22243]I[HddlBlob.cpp:176] Info: HddlBlob initialize ion successfully.
+libavfilter/inference_backend/image_inference_async_preproc.c:54 : ImageInferenceAsyncPreprocCreate 	 Using async preproc image inference. 
+Loading model: device=HDDL, path=open_model_zoo/tools/downloader/Security/object_attributes/vehicle/resnet10_update_1/dldt/FP16/vehicle-attributes-recognition-barrier-0039.xml
+Setting batch_size=1, nireq=48
+Object_class:"vehicle"
+labels: white gray yellow red green blue black 
+labels: car van truck bus 
+Avail devices: CPU GPU 
+device = HDDL
+[HDDLPlugin] [06:43:21.1833][22243]I[ServiceStarter.cpp:40] Info: Waiting for HDDL Service getting ready ...
+[HDDLPlugin] [06:43:21.1833][22243]I[ServiceStarter.cpp:45] Info: Found HDDL Service is running.
+[HDDLPlugin] [06:43:21.1835][22243]I[HddlClient.cpp:256] Hddl api version: 2.2
+[HDDLPlugin] [06:43:21.1835][22243]I[HddlClient.cpp:259] Info: Create Dispatcher2.
+[HDDLPlugin] [06:43:21.1839][22325]I[Dispatcher2.cpp:148] Info: SenderRoutine starts.
+[HDDLPlugin] [06:43:21.1840][22243]I[HddlClient.cpp:270] Info: RegisterClient HDDLPlugin.
+[HDDLPlugin] [06:43:21.1844][22243]I[HddlClient.cpp:275] Client Id: 4
+libavfilter/inference_backend/image_inference_async_preproc.c:54 : ImageInferenceAsyncPreprocCreate 	 Using async preproc image inference. 
+Output #0, iemetadata, to '1_out.json':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf58.20.100
+    Stream #0:0(eng): Video: wrapped_avframe, vaapi_vld, 1920x1080 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 29.97 fps, 29.97 tbn, 29.97 tbc (default)
+    Metadata:
+      handler_name    : ?Mainconcept Video Media Handler
+      encoder         : Lavc58.35.100 wrapped_avframe
+[1;32m[Parsed_detect_0 @ 0x41e1640] [0minit time:5162192
+[1;32m[Parsed_classify_1 @ 0x41c3fc0] [0minit time:328888
+[1;32m[graph 0 input from stream 0:0 @ 0x41a2ac0] [0minit time:23
+[1;32m[out_0_0 @ 0x40b9740] [0minit time:1
+| profiling | total frame=0 fps=0.00 |size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    | profiling | total frame=22 fps=3.66 | fps without filter init=42.96 |size=       0kB time=00:00:00.73 bitrate=   0.0kbits/s speed=0.122x    | profiling | total frame=49 fps=7.53 | fps without filter init=48.33 |size=       0kB time=00:00:01.63 bitrate=   0.0kbits/s speed=0.251x    | profiling | total frame=74 fps=10.47 | fps without filter init=46.86 |size=       0kB time=00:00:02.46 bitrate=   0.0kbits/s speed=0.349x    | profiling | total frame=102 fps=13.34 | fps without filter init=47.32 |size=       0kB time=00:00:03.40 bitrate=   0.0kbits/s speed=0.445x    | profiling | total frame=130 fps=15.81 | fps without filter init=47.63 |size=       0kB time=00:00:04.33 bitrate=   0.0kbits/s speed=0.528x    | profiling | total frame=156 fps=17.74 | fps without filter init=47.22 |size=       2kB time=00:00:05.20 bitrate=   3.7kbits/s speed=0.592x    | profiling | total frame=186 fps=19.85 | fps without filter init=47.97 |size=       4kB time=00:00:06.20 bitrate=   4.7kbits/s speed=0.662x    | profiling | total frame=214 fps=21.52 | fps without filter init=48.07 |size=       4kB time=00:00:07.14 bitrate=   4.1kbits/s speed=0.718x    | profiling | total frame=240 fps=22.98 | fps without filter init=48.46 |size=      12kB time=00:00:08.00 bitrate=  12.1kbits/s speed=0.767x    | profiling | total frame=345 fps=31.52 | fps without filter init=63.24 |size=      17kB time=00:00:11.51 bitrate=  12.2kbits/s speed=1.05x    | profiling | total frame=479 fps=41.84 | fps without filter init=80.40 |size=      31kB time=00:00:15.98 bitrate=  15.8kbits/s speed= 1.4x    | profiling | total frame=616 fps=51.52 | fps without filter init=95.26 |size=      55kB time=00:00:20.55 bitrate=  21.8kbits/s speed=1.72x    | profiling | total frame=751 fps=60.28 | fps without filter init=107.80 |size=      55kB time=00:00:25.05 bitrate=  17.9kbits/s speed=2.01x    | profiling | total frame=883 fps=68.04 | fps without filter init=117.93 |size=      71kB time=00:00:29.46 bitrate=  19.6kbits/s speed=2.27x    | profiling | total frame=1020 fps=75.66 | fps without filter init=127.66 |size=      71kB time=00:00:34.06 bitrate=  17.0kbits/s speed=2.53x    | profiling | total frame=1152 fps=82.37 | fps without filter init=135.61 |size=      86kB time=00:00:38.47 bitrate=  18.3kbits/s speed=2.75x    | profiling | total frame=1291 fps=89.11 | fps without filter init=143.50 |size=      88kB time=00:00:43.10 bitrate=  16.7kbits/s speed=2.98x    | profiling | total frame=1428 fps=95.27 | fps without filter init=150.36 |size=     109kB time=00:00:47.68 bitrate=  18.8kbits/s speed=3.18x    | profiling | total frame=1561 fps=100.78 | fps without filter init=156.12 |size=     125kB time=00:00:52.11 bitrate=  19.7kbits/s speed=3.36x    | profiling | total frame=1695 fps=105.99 | fps without filter init=161.40 |size=     131kB time=00:00:56.58 bitrate=  19.0kbits/s speed=3.54x    | profiling | total frame=1829 fps=110.73 | fps without filter init=165.86 |size=     141kB time=00:01:01.12 bitrate=  18.9kbits/s speed= 3.7x    | profiling | total frame=1964 fps=115.38 | fps without filter init=170.33 |size=     144kB time=00:01:05.63 bitrate=  17.9kbits/s speed=3.86x    | profiling | total frame=2105 fps=120.11 | fps without filter init=174.90 |size=     159kB time=00:01:10.33 bitrate=  18.5kbits/s speed=4.01x    | profiling | total frame=2237 fps=124.09 | fps without filter init=178.45 |size=     159kB time=00:01:14.74 bitrate=  17.4kbits/s speed=4.15x    | profiling | total frame=2374 fps=128.12 | fps without filter init=182.08 |size=     196kB time=00:01:19.31 bitrate=  20.2kbits/s speed=4.28x    | profiling | total frame=2507 fps=131.70 | fps without filter init=185.09 |size=     196kB time=00:01:23.75 bitrate=  19.2kbits/s speed= 4.4x    | profiling | total frame=2641 fps=135.01 | fps without filter init=187.70 |size=     212kB time=00:01:28.22 bitrate=  19.7kbits/s speed=4.51x    | profiling | total frame=2779 fps=138.49 | fps without filter init=190.66 |size=     212kB time=00:01:32.85 bitrate=  18.7kbits/s speed=4.63x    | profiling | total frame=2917 fps=141.83 | fps without filter init=193.48 |size=     216kB time=00:01:37.46 bitrate=  18.1kbits/s speed=4.74x    | profiling | total frame=3051 fps=144.81 | fps without filter init=195.85 |size=     229kB time=00:01:41.93 bitrate=  18.4kbits/s speed=4.84x    | profiling | total frame=3186 fps=147.68 | fps without filter init=198.10 |size=     242kB time=00:01:46.43 bitrate=  18.6kbits/s speed=4.93x    | profiling | total frame=3321 fps=150.40 | fps without filter init=200.17 |size=     267kB time=00:01:50.94 bitrate=  19.7kbits/s speed=5.02x    | profiling | total frame=3457 fps=152.93 | fps without filter init=201.99 |size=     267kB time=00:01:55.48 bitrate=  18.9kbits/s speed=5.11x    [1;32m[Parsed_detect_0 @ 0x41e1640] [0mGet EOS.
+output:53 processed:0
+output:43 processed:10
+output:43 processed:9
+output:37 processed:14
+output:37 processed:13
+output:37 processed:12
+output:33 processed:15
+output:33 processed:14
+output:31 processed:15
+output:31 processed:14
+output:31 processed:13
+output:31 processed:12
+output:31 processed:11
+output:31 processed:10
+output:27 processed:13
+output:27 processed:12
+output:27 processed:11
+output:21 processed:16
+output:21 processed:15
+output:15 processed:20
+output:15 processed:19
+output:11 processed:22
+output:9 processed:23
+output:9 processed:22
+output:9 processed:21
+output:9 processed:20
+output:9 processed:19
+output:9 processed:18
+output:5 processed:21
+output:5 processed:20
+output:0 processed:24
+output:0 processed:23
+output:0 processed:22
+output:0 processed:21
+output:0 processed:20
+output:0 processed:19
+output:0 processed:18
+output:0 processed:17
+output:0 processed:16
+output:0 processed:15
+output:0 processed:14
+output:0 processed:13
+output:0 processed:12
+output:0 processed:11
+output:0 processed:10
+output:0 processed:9
+output:0 processed:8
+output:0 processed:7
+output:0 processed:6
+output:0 processed:5
+output:0 processed:4
+output:0 processed:3
+output:0 processed:2
+output:0 processed:1
+output:0 processed:0
+| profiling | total frame=3616 fps=155.19 | fps without filter init=203.04 |size=     283kB time=00:02:00.78 bitrate=  19.2kbits/s speed=5.18x    [1;32m[Parsed_classify_1 @ 0x41c3fc0] [0mGet EOS.
+output:0 processed:0
+| profiling | total frame=3616 fps=155.18 | fps without filter init=203.03 |size=     283kB time=00:02:00.78 bitrate=  19.2kbits/s speed=5.18x    
+video:1893kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
+| filter profiling | name=detect, init=5162.19 ms, frame=3616, fps=247.90
+[HDDLPlugin] [06:43:39.2878][22267]I[Dispatcher2.cpp:212] Info: Listen Thread wake up and to exit.
+[HDDLPlugin] [06:43:39.2878][22243]I[Dispatcher2.cpp:81] Info: Client dispatcher exit.
+[HDDLPlugin] [06:43:39.2880][22243]I[HddlClient.cpp:203] Info: Hddl client unregistered.
+[HDDLPlugin] [06:43:39.3900][22326]I[Dispatcher2.cpp:212] Info: Listen Thread wake up and to exit.
+[HDDLPlugin] [06:43:39.3901][22243]I[Dispatcher2.cpp:81] Info: Client dispatcher exit.
+[HDDLPlugin] [06:43:39.3902][22243]I[HddlClient.cpp:203] Info: Hddl client unregistered.
+]0;root@vca_node_00: ~root@vca_node_00:~# [K

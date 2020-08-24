@@ -1,0 +1,3 @@
+Shiva,19,BTM
+Rama,20,HSR
+Raghu,21,Jp

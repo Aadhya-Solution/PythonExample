@@ -1,0 +1,23 @@
+import os
+import time
+print "Current Directory:",os.getcwd()
+scriptPath=os.getcwd()
+
+print "Make Directory:",os.mkdir("newdir")
+os.chdir('./newdir')
+time.sleep(10)
+fd=open('inPut.txt','w')
+fd.close()
+print "Remove File:",os.remove("inPut.txt")
+time.sleep(10)
+os.chdir('..')
+time.sleep(10)
+print "Remove directory:",os.rmdir("newdir")
+time.sleep(10)
+print "Chnage The directory:",os.chdir("D://teachiningDetails")
+time.sleep(10)
+print "Now where we are path :",os.getcwd()
+time.sleep(10)
+print "Comming Back to Scripts:",os.chdir(scriptPath)
+time.sleep(10)
+print "Script Path we are :",os.getcwd()

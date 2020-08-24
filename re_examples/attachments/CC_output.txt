@@ -1,0 +1,1346 @@
+root@vca_node_00:~# /root/ffva/ffmpeg/ffmpeg -profiling_all -flags unaligned -hwaccel vaapi -hwaccel_output_format vaapi -hwaccel_device /dev/dri/renderD128 -extra_hw_frames 16 -i 2min_vide
+os/car-detection_1920_1080_2min.mp4 -threads 1 -vf detect=model=open_model_zoo/tools/downloader/Transportation/object_detection/vehicle/mobilenet-reduced-ssd/dldt/FP16/vehicle-detection-adas-0002.xml:model_proc=ffva/FFmpeg-patch/samples/model_proc/vehicle-detection-adas-0002.json:device=HDDL:nireq=48,classify=model=open_model_zoo/tools/downloader/Security/object_attributes/vehicle/resnet10_update_1/dldt/FP16/vehicle-attributes-recognition-barrier-0039.xml:model_proc=ffva/FFmpeg-patch/samples/model_proc/vehicle-
+vehicle-attributes-recognition-barrier-0039.json   vehicle-detection-adas-0002.json                   vehicle-license-plate-detection-barrier-0106.json
+root@vca_node_00:~# /root/ffva/ffmpeg/ffmpeg -profiling_all -flags unaligned -hwaccel vaapi -hwaccel_output_format vaapi -hwaccel_device /dev/dri/renderD128 -extra_hw_frames 16 -i 2min_vide
+os/car-detection_1920_1080_2min.mp4 -threads 1 -vf detect=model=open_model_zoo/tools/downloader/Transportation/object_detection/vehicle/mobilenet-reduced-ssd/dldt/FP16/vehicle-detection-adas-0002.xml:model_proc=ffva/FFmpeg-patch/samples/model_proc/vehicle-detection-adas-0002.json:device=HDDL:nireq=48,classify=model=open_model_zoo/tools/downloader/Security/object_attributes/vehicle/resnet10_update_1/dldt/FP16/vehicle-attributes-recognition-barrier-0039.xml:model_proc=ffva/FFmpeg-patch/samples/model_proc/vehicle-attributes-recognition-barrier-0039.json:device=HDDL:nireq=48 -an -f iemetadata 1_out.json
+ffmpeg version 4.1 Copyright (c) 2000-2018 the FFmpeg developers
+  built with gcc 5.4.0 (Ubuntu 5.4.0-6ubuntu1~16.04.10) 20160609
+  configuration: --prefix=/root/ffmpeg_build --pkg-config-flags=--static --extra-cflags=-I/root/ffmpeg_build/include --extra-ldflags=-L/root/ffmpeg_build/lib --extra-libs='-lpthread -lm' --bindir=/root/bin --enable-gpl --enable-openssl --enable-nonfree --enable-libdrm --disable-doc --disable-htmlpages --disable-manpages --disable-podpages --disable-txtpages --enable-libx264 --enable-libx265 --enable-librdkafka --enable-libjson_c --enable-libinference_engine_c_api
+  libavutil      56. 22.100 / 56. 22.100
+  libavcodec     58. 35.100 / 58. 35.100
+  libavformat    58. 20.100 / 58. 20.100
+  libavdevice    58.  5.100 / 58.  5.100
+  libavfilter     7. 40.101 /  7. 40.101
+  libswscale      5.  3.100 /  5.  3.100
+  libswresample   3.  3.100 /  3.  3.100
+  libpostproc    55.  3.100 / 55.  3.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '2min_videos/car-detection_1920_1080_2min.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf58.20.100
+  Duration: 00:02:00.81, start: 0.000000, bitrate: 12591 kb/s
+    Stream #0:0(eng): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709), 1920x1080 [SAR 1:1 DAR 16:9], 12583 kb/s, 29.94 fps, 29.97 tbr, 30k tbn, 59.94 tbc (default)
+    Metadata:
+      handler_name    : ?Mainconcept Video Media Handler
+    Stream #0:1(eng): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 2 kb/s (default)
+    Metadata:
+      handler_name    : #Mainconcept MP4 Sound Media Handler
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> wrapped_avframe (native))
+Press [q] to stop, [?] for help
+Loading model: device=HDDL, path=open_model_zoo/tools/downloader/Transportation/object_detection/vehicle/mobilenet-reduced-ssd/dldt/FP16/vehicle-detection-adas-0002.xml
+Setting batch_size=1, nireq=48
+Color Format:"BGR"
+labels: background vehicle
+Avail devices: CPU GPU
+device = HDDL
+[12:38:35.2234][28224]I[ServiceStarter.cpp:40] Info: Waiting for HDDL Service getting ready ...
+[12:38:35.2237][28224]I[ServiceStarter.cpp:45] Info: Found HDDL Service is running.
+[HDDLPlugin] [12:38:35.2239][28224]I[HddlClient.cpp:256] Hddl api version: 2.2
+[HDDLPlugin] [12:38:35.2239][28224]I[HddlClient.cpp:259] Info: Create Dispatcher2.
+[HDDLPlugin] [12:38:35.2242][28237]I[Dispatcher2.cpp:148] Info: SenderRoutine starts.
+[HDDLPlugin] [12:38:35.2243][28224]I[HddlClient.cpp:270] Info: RegisterClient HDDLPlugin.
+[HDDLPlugin] [12:38:35.2248][28224]I[HddlClient.cpp:275] Client Id: 1
+[HDDLPlugin] [12:38:40.1272][28224]I[HddlBlob.cpp:166] Info: HddlBlob initialize ion ...
+[HDDLPlugin] [12:38:40.1274][28224]I[HddlBlob.cpp:176] Info: HddlBlob initialize ion successfully.
+libavfilter/inference_backend/image_inference_async_preproc.c:54 : ImageInferenceAsyncPreprocCreate      Using async preproc image inference.
+Loading model: device=HDDL, path=open_model_zoo/tools/downloader/Security/object_attributes/vehicle/resnet10_update_1/dldt/FP16/vehicle-attributes-recognition-barrier-0039.xml
+Setting batch_size=1, nireq=48
+Object_class:"vehicle"
+labels: white gray yellow red green blue black
+labels: car van truck bus
+Avail devices: CPU GPU
+device = HDDL
+[HDDLPlugin] [12:38:40.2534][28224]I[ServiceStarter.cpp:40] Info: Waiting for HDDL Service getting ready ...
+[HDDLPlugin] [12:38:40.2534][28224]I[ServiceStarter.cpp:45] Info: Found HDDL Service is running.
+[HDDLPlugin] [12:38:40.2536][28224]I[HddlClient.cpp:256] Hddl api version: 2.2
+[HDDLPlugin] [12:38:40.2536][28224]I[HddlClient.cpp:259] Info: Create Dispatcher2.
+[HDDLPlugin] [12:38:40.2538][28296]I[Dispatcher2.cpp:148] Info: SenderRoutine starts.
+[HDDLPlugin] [12:38:40.2539][28224]I[HddlClient.cpp:270] Info: RegisterClient HDDLPlugin.
+[HDDLPlugin] [12:38:40.2541][28224]I[HddlClient.cpp:275] Client Id: 2
+libavfilter/inference_backend/image_inference_async_preproc.c:54 : ImageInferenceAsyncPreprocCreate      Using async preproc image inference.
+Output #0, iemetadata, to '1_out.json':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf58.20.100
+    Stream #0:0(eng): Video: wrapped_avframe, vaapi_vld, 1920x1080 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 29.97 fps, 29.97 tbn, 29.97 tbc (default)
+    Metadata:
+      handler_name    : ?Mainconcept Video Media Handler
+      encoder         : Lavc58.35.100 wrapped_avframe
+[Parsed_detect_0 @ 0x368db00] init time:5121937
+[Parsed_classify_1 @ 0x368ecc0] init time:342393
+[graph 0 input from stream 0:0 @ 0x368eb80] init time:11
+[out_0_0 @ 0x3690d40] init time:0
+[h264 @ 0x32dfac0] get_buffer() failed| fps without filter init=19.32 |size=       0kB time=00:00:00.33 bitrate=   0.0kbits/s speed=0.0558x
+[h264 @ 0x32dfac0] thread_get_buffer() failed
+[h264 @ 0x32dfac0] decode_slice_header error
+[h264 @ 0x32dfac0] no frame!
+[h264 @ 0x3298d00] get_buffer() failed
+[h264 @ 0x3298d00] thread_get_buffer() failed
+[h264 @ 0x3298d00] decode_slice_header error
+[h264 @ 0x3298d00] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+    Last message repeated 1 times
+[h264 @ 0x32dfac0] get_buffer() failed
+[h264 @ 0x32dfac0] thread_get_buffer() failed
+[h264 @ 0x32dfac0] decode_slice_header error
+[h264 @ 0x32dfac0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing inpute=       0kB time=00:00:00.80 bitrate=   0.0kbits/s speed=0.124x
+[h264 @ 0x32dfac0] get_buffer() failed
+[h264 @ 0x32dfac0] thread_get_buffer() failed
+[h264 @ 0x32dfac0] decode_slice_header error
+[h264 @ 0x32dfac0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32dfac0] get_buffer() failed
+[h264 @ 0x32dfac0] thread_get_buffer() failed
+[h264 @ 0x32dfac0] decode_slice_header error
+[h264 @ 0x32dfac0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32dfac0] get_buffer() failed
+[h264 @ 0x32dfac0] thread_get_buffer() failed
+[h264 @ 0x32dfac0] decode_slice_header error
+[h264 @ 0x32dfac0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing inpute=       0kB time=00:00:01.20 bitrate=   0.0kbits/s speed=0.172x
+[h264 @ 0x32dfac0] get_buffer() failed
+[h264 @ 0x32dfac0] thread_get_buffer() failed
+[h264 @ 0x32dfac0] decode_slice_header error
+[h264 @ 0x32dfac0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32c3340] get_buffer() failed
+[h264 @ 0x32c3340] thread_get_buffer() failed
+[h264 @ 0x32c3340] decode_slice_header error
+[h264 @ 0x32c3340] no frame!
+[h264 @ 0x32dfac0] get_buffer() failed
+[h264 @ 0x32dfac0] thread_get_buffer() failed
+[h264 @ 0x32dfac0] decode_slice_header error
+[h264 @ 0x32dfac0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+    Last message repeated 1 times
+[h264 @ 0x32c3340] get_buffer() failed
+[h264 @ 0x32c3340] thread_get_buffer() failed
+[h264 @ 0x32c3340] decode_slice_header error
+[h264 @ 0x32c3340] no frame!
+Error while decoding stream #0:0: Invalid data found when processing inpute=       0kB time=00:00:01.60 bitrate=   0.0kbits/s speed=0.214x
+[h264 @ 0x32c3340] get_buffer() failed
+[h264 @ 0x32c3340] thread_get_buffer() failed
+[h264 @ 0x32c3340] decode_slice_header error
+[h264 @ 0x32c3340] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32c3340] get_buffer() failed
+[h264 @ 0x32c3340] thread_get_buffer() failed
+[h264 @ 0x32c3340] decode_slice_header error
+[h264 @ 0x32c3340] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32c3340] get_buffer() failed
+[h264 @ 0x32c3340] thread_get_buffer() failed
+[h264 @ 0x32c3340] decode_slice_header error
+[h264 @ 0x32c3340] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32c3340] get_buffer() failed
+[h264 @ 0x32c3340] thread_get_buffer() failed
+[h264 @ 0x32c3340] decode_slice_header error
+[h264 @ 0x32c3340] no frame!
+Error while decoding stream #0:0: Invalid data found when processing inpute=       0kB time=00:00:02.03 bitrate=   0.0kbits/s speed=0.255x
+[h264 @ 0x32a6ec0] get_buffer() failed
+[h264 @ 0x32a6ec0] thread_get_buffer() failed
+[h264 @ 0x32a6ec0] decode_slice_header error
+[h264 @ 0x32a6ec0] no frame!
+[h264 @ 0x32c3340] get_buffer() failed
+[h264 @ 0x32c3340] thread_get_buffer() failed
+[h264 @ 0x32c3340] decode_slice_header error
+[h264 @ 0x32c3340] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+    Last message repeated 1 times
+[h264 @ 0x32a6ec0] get_buffer() failed
+[h264 @ 0x32a6ec0] thread_get_buffer() failed
+[h264 @ 0x32a6ec0] decode_slice_header error
+[h264 @ 0x32a6ec0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32a6ec0] get_buffer() failed
+[h264 @ 0x32a6ec0] thread_get_buffer() failed
+[h264 @ 0x32a6ec0] decode_slice_header error
+[h264 @ 0x32a6ec0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing inpute=       0kB time=00:00:02.53 bitrate=   0.0kbits/s speed=0.299x
+[h264 @ 0x32a6ec0] get_buffer() failed
+[h264 @ 0x32a6ec0] thread_get_buffer() failed
+[h264 @ 0x32a6ec0] decode_slice_header error
+[h264 @ 0x32a6ec0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32a6ec0] get_buffer() failed
+[h264 @ 0x32a6ec0] thread_get_buffer() failed
+[h264 @ 0x32a6ec0] decode_slice_header error
+[h264 @ 0x32a6ec0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32a6ec0] get_buffer() failed
+[h264 @ 0x32a6ec0] thread_get_buffer() failed
+[h264 @ 0x32a6ec0] decode_slice_header error
+[h264 @ 0x32a6ec0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing inpute=       0kB time=00:00:03.13 bitrate=   0.0kbits/s speed=0.349x
+[h264 @ 0x3243100] get_buffer() failed
+[h264 @ 0x3243100] thread_get_buffer() failed
+[h264 @ 0x3243100] decode_slice_header error
+[h264 @ 0x3243100] no frame!
+[h264 @ 0x32a6ec0] get_buffer() failed
+[h264 @ 0x32a6ec0] thread_get_buffer() failed
+[h264 @ 0x32a6ec0] decode_slice_header error
+[h264 @ 0x32a6ec0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+    Last message repeated 1 times
+[h264 @ 0x3243100] get_buffer() failed
+[h264 @ 0x3243100] thread_get_buffer() failed
+[h264 @ 0x3243100] decode_slice_header error
+[h264 @ 0x3243100] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x3243100] get_buffer() failed
+[h264 @ 0x3243100] thread_get_buffer() failed
+[h264 @ 0x3243100] decode_slice_header error
+[h264 @ 0x3243100] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x3298d00] get_buffer() failed1 | fps without filter init=23.88 |size=       0kB time=00:00:04.17 bitrate=   0.0kbits/s speed=0.418x
+[h264 @ 0x3298d00] thread_get_buffer() failed
+[h264 @ 0x3298d00] decode_slice_header error
+[h264 @ 0x3298d00] no frame!
+[h264 @ 0x3243100] get_buffer() failed
+[h264 @ 0x3243100] thread_get_buffer() failed
+[h264 @ 0x3243100] decode_slice_header error
+[h264 @ 0x3243100] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+    Last message repeated 1 times
+[h264 @ 0x3298d00] get_buffer() failed
+[h264 @ 0x3298d00] thread_get_buffer() failed
+[h264 @ 0x3298d00] decode_slice_header error
+[h264 @ 0x3298d00] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x3298d00] get_buffer() failed
+[h264 @ 0x3298d00] thread_get_buffer() failed
+[h264 @ 0x3298d00] decode_slice_header error
+[h264 @ 0x3298d00] no frame!
+Error while decoding stream #0:0: Invalid data found when processing inputize=       0kB time=00:00:04.67 bitrate=   0.0kbits/s speed=0.445x
+[h264 @ 0x3298d00] get_buffer() failed
+[h264 @ 0x3298d00] thread_get_buffer() failed
+[h264 @ 0x3298d00] decode_slice_header error
+[h264 @ 0x3298d00] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32dfac0] get_buffer() failed
+[h264 @ 0x32dfac0] thread_get_buffer() failed
+[h264 @ 0x32dfac0] decode_slice_header error
+[h264 @ 0x32dfac0] no frame!
+[h264 @ 0x3243100] get_buffer() failed
+[h264 @ 0x3243100] thread_get_buffer() failed
+[h264 @ 0x3243100] decode_slice_header error
+[h264 @ 0x3243100] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+    Last message repeated 1 times
+[h264 @ 0x3243100] get_buffer() failed
+[h264 @ 0x3243100] thread_get_buffer() failed
+[h264 @ 0x3243100] decode_slice_header error
+[h264 @ 0x3243100] no frame!
+Error while decoding stream #0:0: Invalid data found when processing inputize=      19kB time=00:00:08.30 bitrate=  18.7kbits/s speed=0.756x
+[h264 @ 0x3298d00] get_buffer() failed
+[h264 @ 0x3298d00] thread_get_buffer() failed
+[h264 @ 0x3298d00] decode_slice_header error
+[h264 @ 0x3298d00] no frame!
+[h264 @ 0x32a6ec0] get_buffer() failed
+[h264 @ 0x32a6ec0] thread_get_buffer() failed
+[h264 @ 0x32a6ec0] decode_slice_header error
+[h264 @ 0x32a6ec0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+    Last message repeated 1 times
+[h264 @ 0x3243100] get_buffer() failed6 | fps without filter init=59.43 |size=      20kB time=00:00:13.04 bitrate=  12.6kbits/s speed=1.14x
+[h264 @ 0x3243100] thread_get_buffer() failed
+[h264 @ 0x3243100] decode_slice_header error
+[h264 @ 0x3243100] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32dfac0] get_buffer() failed
+[h264 @ 0x32dfac0] thread_get_buffer() failed
+[h264 @ 0x32dfac0] decode_slice_header error
+[h264 @ 0x32dfac0] no frame!
+[h264 @ 0x3298d00] Missing reference picture, default is 0
+[h264 @ 0x3298d00] decode_slice_header error
+[h264 @ 0x3298d00] Failed to upload decode parameters: 18 (invalid parameter).
+[h264 @ 0x3298d00] Failed to end picture decode after error: 18 (invalid parameter).
+[h264 @ 0x3298d00] hardware accelerator failed to decode picture
+[h264 @ 0x3243100] Missing reference picture, default is 65542
+[h264 @ 0x32a6ec0] Missing reference picture, default is 65542
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32c3340] Missing reference picture, default is 65542
+Error while decoding stream #0:0: Input/output error
+[h264 @ 0x32dfac0] Missing reference picture, default is 65548
+[h264 @ 0x3298d00] Missing reference picture, default is 65548
+[h264 @ 0x3243100] Missing reference picture, default is 65548
+[h264 @ 0x32a6ec0] Missing reference picture, default is 65554
+[h264 @ 0x32c3340] Missing reference picture, default is 65554
+[h264 @ 0x32dfac0] Missing reference picture, default is 65554
+[h264 @ 0x32dfac0] get_buffer() failed
+[h264 @ 0x32dfac0] thread_get_buffer() failed
+[h264 @ 0x32dfac0] decode_slice_header error
+[h264 @ 0x32dfac0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x3243100] get_buffer() failed
+[h264 @ 0x3243100] thread_get_buffer() failed
+[h264 @ 0x3243100] decode_slice_header error
+[h264 @ 0x3243100] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32c3340] get_buffer() failed
+[h264 @ 0x32c3340] thread_get_buffer() failed
+[h264 @ 0x32c3340] decode_slice_header error
+[h264 @ 0x32c3340] no frame!
+[h264 @ 0x3243100] get_buffer() failed
+[h264 @ 0x3243100] thread_get_buffer() failed
+[h264 @ 0x3243100] decode_slice_header error
+[h264 @ 0x3243100] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+    Last message repeated 1 times
+[h264 @ 0x3243100] get_buffer() failed
+[h264 @ 0x3243100] thread_get_buffer() failed
+[h264 @ 0x3243100] decode_slice_header error
+[h264 @ 0x3243100] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x3243100] get_buffer() failed
+[h264 @ 0x3243100] thread_get_buffer() failed
+[h264 @ 0x3243100] decode_slice_header error
+[h264 @ 0x3243100] no frame!
+[h264 @ 0x32a6ec0] Missing reference picture, default is 0
+[h264 @ 0x32a6ec0] decode_slice_header error
+[h264 @ 0x32a6ec0] Failed to upload decode parameters: 18 (invalid parameter).
+[h264 @ 0x32a6ec0] Failed to end picture decode after error: 18 (invalid parameter).
+[h264 @ 0x32a6ec0] hardware accelerator failed to decode picture
+[h264 @ 0x32c3340] Missing reference picture, default is 65540
+[h264 @ 0x32dfac0] Missing reference picture, default is 65540
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x3298d00] Missing reference picture, default is 65544
+Error while decoding stream #0:0: Input/output error
+[h264 @ 0x3243100] get_buffer() failed
+[h264 @ 0x3243100] thread_get_buffer() failed
+[h264 @ 0x3243100] decode_slice_header error
+[h264 @ 0x3243100] no frame!
+[h264 @ 0x32a6ec0] Missing reference picture, default is 65544
+[h264 @ 0x32a6ec0] Missing reference picture, default is 65540
+    Last message repeated 1 times
+[h264 @ 0x32c3340] Missing reference picture, default is 65544
+    Last message repeated 1 times
+[h264 @ 0x32dfac0] Missing reference picture, default is 65552
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x3298d00] get_buffer() failed
+[h264 @ 0x3298d00] thread_get_buffer() failed
+[h264 @ 0x3298d00] decode_slice_header error
+[h264 @ 0x3298d00] no frame!
+[h264 @ 0x3243100] Missing reference picture, default is 65544
+[h264 @ 0x32a6ec0] Missing reference picture, default is 65544
+[h264 @ 0x32c3340] Missing reference picture, default is 65552
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32dfac0] get_buffer() failed
+[h264 @ 0x32dfac0] thread_get_buffer() failed
+[h264 @ 0x32dfac0] decode_slice_header error
+[h264 @ 0x32dfac0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32a6ec0] get_buffer() failed9 | fps without filter init=74.03 |size=      37kB time=00:00:19.35 bitrate=  15.9kbits/s speed=1.61x
+[h264 @ 0x32a6ec0] thread_get_buffer() failed
+[h264 @ 0x32a6ec0] decode_slice_header error
+[h264 @ 0x32a6ec0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x3298d00] get_buffer() failed
+[h264 @ 0x3298d00] thread_get_buffer() failed
+[h264 @ 0x3298d00] decode_slice_header error
+[h264 @ 0x3298d00] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32a6ec0] get_buffer() failed
+[h264 @ 0x32a6ec0] thread_get_buffer() failed
+[h264 @ 0x32a6ec0] decode_slice_header error
+[h264 @ 0x32a6ec0] no frame!
+[h264 @ 0x32c3340] get_buffer() failed
+[h264 @ 0x32c3340] thread_get_buffer() failed
+[h264 @ 0x32c3340] decode_slice_header error
+[h264 @ 0x32c3340] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+    Last message repeated 1 times
+[h264 @ 0x32c3340] get_buffer() failed
+[h264 @ 0x32c3340] thread_get_buffer() failed
+[h264 @ 0x32c3340] decode_slice_header error
+[h264 @ 0x32c3340] no frame!
+[h264 @ 0x32dfac0] Missing reference picture, default is 65538
+[h264 @ 0x32dfac0] co located POCs unavailable
+[h264 @ 0x3298d00] Missing reference picture, default is 65538
+[h264 @ 0x3298d00] co located POCs unavailable
+[h264 @ 0x3243100] Missing reference picture, default is 65548
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32a6ec0] get_buffer() failed
+[h264 @ 0x32a6ec0] thread_get_buffer() failed
+[h264 @ 0x32a6ec0] decode_slice_header error
+[h264 @ 0x32a6ec0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x3298d00] get_buffer() failed
+[h264 @ 0x3298d00] thread_get_buffer() failed
+[h264 @ 0x3298d00] decode_slice_header error
+[h264 @ 0x3298d00] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32dfac0] get_buffer() failed
+[h264 @ 0x32dfac0] thread_get_buffer() failed
+[h264 @ 0x32dfac0] decode_slice_header error
+[h264 @ 0x32dfac0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32a6ec0] get_buffer() failed
+[h264 @ 0x32a6ec0] thread_get_buffer() failed
+[h264 @ 0x32a6ec0] decode_slice_header error
+[h264 @ 0x32a6ec0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x3243100] get_buffer() failed
+[h264 @ 0x3243100] thread_get_buffer() failed
+[h264 @ 0x3243100] decode_slice_header error
+[h264 @ 0x3243100] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32dfac0] get_buffer() failed4 | fps without filter init=87.53 |size=      37kB time=00:00:23.95 bitrate=  12.8kbits/s speed=1.92x
+[h264 @ 0x32dfac0] thread_get_buffer() failed
+[h264 @ 0x32dfac0] decode_slice_header error
+[h264 @ 0x32dfac0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32dfac0] get_buffer() failed
+[h264 @ 0x32dfac0] thread_get_buffer() failed
+[h264 @ 0x32dfac0] decode_slice_header error
+[h264 @ 0x32dfac0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32dfac0] get_buffer() failed
+[h264 @ 0x32dfac0] thread_get_buffer() failed
+[h264 @ 0x32dfac0] decode_slice_header error
+[h264 @ 0x32dfac0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32c3340] get_buffer() failed
+[h264 @ 0x32c3340] thread_get_buffer() failed
+[h264 @ 0x32c3340] decode_slice_header error
+[h264 @ 0x32c3340] no frame!
+[h264 @ 0x3243100] get_buffer() failed
+[h264 @ 0x3243100] thread_get_buffer() failed
+[h264 @ 0x3243100] decode_slice_header error
+[h264 @ 0x3243100] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+    Last message repeated 1 times
+[h264 @ 0x3243100] get_buffer() failed
+[h264 @ 0x3243100] thread_get_buffer() failed
+[h264 @ 0x3243100] decode_slice_header error
+[h264 @ 0x3243100] no frame!
+[h264 @ 0x32a6ec0] Missing reference picture, default is 65538
+[h264 @ 0x32a6ec0] co located POCs unavailable
+[h264 @ 0x32c3340] Missing reference picture, default is 65546
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x3298d00] get_buffer() failed
+[h264 @ 0x3298d00] thread_get_buffer() failed
+[h264 @ 0x3298d00] decode_slice_header error
+[h264 @ 0x3298d00] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x3243100] get_buffer() failed
+[h264 @ 0x3243100] thread_get_buffer() failed
+[h264 @ 0x3243100] decode_slice_header error
+[h264 @ 0x3243100] no frame!
+Error while decoding stream #0:0: Invalid data found when processing inputize=      56kB time=00:00:28.59 bitrate=  16.2kbits/s speed= 2.2x
+[h264 @ 0x32dfac0] get_buffer() failed
+[h264 @ 0x32dfac0] thread_get_buffer() failed
+[h264 @ 0x32dfac0] decode_slice_header error
+[h264 @ 0x32dfac0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32a6ec0] get_buffer() failed
+[h264 @ 0x32a6ec0] thread_get_buffer() failed
+[h264 @ 0x32a6ec0] decode_slice_header error
+[h264 @ 0x32a6ec0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32a6ec0] get_buffer() failed
+[h264 @ 0x32a6ec0] thread_get_buffer() failed
+[h264 @ 0x32a6ec0] decode_slice_header error
+[h264 @ 0x32a6ec0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x3298d00] get_buffer() failed
+[h264 @ 0x3298d00] thread_get_buffer() failed
+[h264 @ 0x3298d00] decode_slice_header error
+[h264 @ 0x3298d00] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32c3340] get_buffer() failed
+[h264 @ 0x32c3340] thread_get_buffer() failed
+[h264 @ 0x32c3340] decode_slice_header error
+[h264 @ 0x32c3340] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32a6ec0] get_buffer() failed5 | fps without filter init=109.51 |size=      56kB time=00:00:33.29 bitrate=  13.9kbits/s speed=2.47x
+[h264 @ 0x32a6ec0] thread_get_buffer() failed
+[h264 @ 0x32a6ec0] decode_slice_header error
+[h264 @ 0x32a6ec0] no frame!
+[h264 @ 0x32c3340] Missing reference picture, default is 65536
+[h264 @ 0x32dfac0] Missing reference picture, default is 65540
+[h264 @ 0x3298d00] Missing reference picture, default is 65548
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x3243100] Missing reference picture, default is 65548
+[h264 @ 0x32c3340] get_buffer() failed
+[h264 @ 0x32c3340] thread_get_buffer() failed
+[h264 @ 0x32c3340] decode_slice_header error
+[h264 @ 0x32c3340] no frame!
+[h264 @ 0x32dfac0] get_buffer() failed
+[h264 @ 0x32dfac0] thread_get_buffer() failed
+[h264 @ 0x32dfac0] decode_slice_header error
+[h264 @ 0x32dfac0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+    Last message repeated 1 times
+[h264 @ 0x32dfac0] get_buffer() failed
+[h264 @ 0x32dfac0] thread_get_buffer() failed
+[h264 @ 0x32dfac0] decode_slice_header error
+[h264 @ 0x32dfac0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32c3340] get_buffer() failed
+[h264 @ 0x32c3340] thread_get_buffer() failed
+[h264 @ 0x32c3340] decode_slice_header error
+[h264 @ 0x32c3340] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x3298d00] get_buffer() failed
+[h264 @ 0x3298d00] thread_get_buffer() failed
+[h264 @ 0x3298d00] decode_slice_header error
+[h264 @ 0x3298d00] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32a6ec0] get_buffer() failed
+[h264 @ 0x32a6ec0] thread_get_buffer() failed
+[h264 @ 0x32a6ec0] decode_slice_header error
+[h264 @ 0x32a6ec0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32c3340] get_buffer() failed
+[h264 @ 0x32c3340] thread_get_buffer() failed
+[h264 @ 0x32c3340] decode_slice_header error
+[h264 @ 0x32c3340] no frame!
+[h264 @ 0x32dfac0] Missing reference picture, default is 65536
+[h264 @ 0x3298d00] Missing reference picture, default is 65536
+[h264 @ 0x3243100] Missing reference picture, default is 65540
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32a6ec0] Missing reference picture, default is 65552
+[h264 @ 0x32c3340] Missing reference picture, default is 65552
+[h264 @ 0x32dfac0] Missing reference picture, default is 65552
+[h264 @ 0x32dfac0] get_buffer() failed11 | fps without filter init=118.32 |size=      65kB time=00:00:37.83 bitrate=  14.2kbits/s speed= 2.7x
+[h264 @ 0x32dfac0] thread_get_buffer() failed
+[h264 @ 0x32dfac0] decode_slice_header error
+[h264 @ 0x32dfac0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32dfac0] get_buffer() failed
+[h264 @ 0x32dfac0] thread_get_buffer() failed
+[h264 @ 0x32dfac0] decode_slice_header error
+[h264 @ 0x32dfac0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32dfac0] get_buffer() failed
+[h264 @ 0x32dfac0] thread_get_buffer() failed
+[h264 @ 0x32dfac0] decode_slice_header error
+[h264 @ 0x32dfac0] no frame!
+[h264 @ 0x3298d00] Missing reference picture, default is 0
+[h264 @ 0x3298d00] decode_slice_header error
+[h264 @ 0x3298d00] Failed to upload decode parameters: 18 (invalid parameter).
+[h264 @ 0x3298d00] Failed to end picture decode after error: 18 (invalid parameter).
+[h264 @ 0x3298d00] hardware accelerator failed to decode picture
+[h264 @ 0x3243100] Missing reference picture, default is 65542
+[h264 @ 0x32a6ec0] Missing reference picture, default is 65542
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32c3340] Missing reference picture, default is 65542
+Error while decoding stream #0:0: Input/output error
+[h264 @ 0x32dfac0] get_buffer() failed
+[h264 @ 0x32dfac0] thread_get_buffer() failed
+[h264 @ 0x32dfac0] decode_slice_header error
+[h264 @ 0x32dfac0] no frame!
+[h264 @ 0x3298d00] Missing reference picture, default is 65548
+[h264 @ 0x3243100] Missing reference picture, default is 65548
+[h264 @ 0x32a6ec0] Missing reference picture, default is 65554
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32c3340] Missing reference picture, default is 65554
+[h264 @ 0x32dfac0] Missing reference picture, default is 65554
+[h264 @ 0x32c3340] get_buffer() failed
+[h264 @ 0x32c3340] thread_get_buffer() failed
+[h264 @ 0x32c3340] decode_slice_header error
+[h264 @ 0x32c3340] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32c3340] get_buffer() failed
+[h264 @ 0x32c3340] thread_get_buffer() failed
+[h264 @ 0x32c3340] decode_slice_header error
+[h264 @ 0x32c3340] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32c3340] get_buffer() failed
+[h264 @ 0x32c3340] thread_get_buffer() failed
+[h264 @ 0x32c3340] decode_slice_header error
+[h264 @ 0x32c3340] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x3243100] get_buffer() failed
+[h264 @ 0x3243100] thread_get_buffer() failed
+[h264 @ 0x3243100] decode_slice_header error
+[h264 @ 0x3243100] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32c3340] get_buffer() failed
+[h264 @ 0x32c3340] thread_get_buffer() failed
+[h264 @ 0x32c3340] decode_slice_header error
+[h264 @ 0x32c3340] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x3243100] get_buffer() failed
+[h264 @ 0x3243100] thread_get_buffer() failed
+[h264 @ 0x3243100] decode_slice_header error
+[h264 @ 0x3243100] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input|size=      77kB time=00:00:43.20 bitrate=  14.6kbits/s speed=2.98x
+[h264 @ 0x32c3340] get_buffer() failed
+[h264 @ 0x32c3340] thread_get_buffer() failed
+[h264 @ 0x32c3340] decode_slice_header error
+[h264 @ 0x32c3340] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32a6ec0] get_buffer() failed
+[h264 @ 0x32a6ec0] thread_get_buffer() failed
+[h264 @ 0x32a6ec0] decode_slice_header error
+[h264 @ 0x32a6ec0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32c3340] get_buffer() failed
+[h264 @ 0x32c3340] thread_get_buffer() failed
+[h264 @ 0x32c3340] decode_slice_header error
+[h264 @ 0x32c3340] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32c3340] get_buffer() failed
+[h264 @ 0x32c3340] thread_get_buffer() failed
+[h264 @ 0x32c3340] decode_slice_header error
+[h264 @ 0x32c3340] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32c3340] get_buffer() failed
+[h264 @ 0x32c3340] thread_get_buffer() failed
+[h264 @ 0x32c3340] decode_slice_header error
+[h264 @ 0x32c3340] no frame!
+[h264 @ 0x3298d00] get_buffer() failed
+[h264 @ 0x3298d00] thread_get_buffer() failed
+[h264 @ 0x3298d00] decode_slice_header error
+[h264 @ 0x3298d00] no frame!
+[h264 @ 0x3243100] Missing reference picture, default is 65536
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32a6ec0] Missing reference picture, default is 65538
+[h264 @ 0x32c3340] get_buffer() failed
+[h264 @ 0x32c3340] thread_get_buffer() failed
+[h264 @ 0x32c3340] decode_slice_header error
+[h264 @ 0x32c3340] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32dfac0] Missing reference picture, default is 65548
+[h264 @ 0x3298d00] get_buffer() failed
+[h264 @ 0x3298d00] thread_get_buffer() failed
+[h264 @ 0x3298d00] decode_slice_header error
+[h264 @ 0x3298d00] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+    Last message repeated 1 times
+[h264 @ 0x3298d00] get_buffer() failed
+[h264 @ 0x3298d00] thread_get_buffer() failed
+[h264 @ 0x3298d00] decode_slice_header error
+[h264 @ 0x3298d00] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x3243100] get_buffer() failed
+[h264 @ 0x3243100] thread_get_buffer() failed
+[h264 @ 0x3243100] decode_slice_header error
+[h264 @ 0x3243100] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32a6ec0] get_buffer() failed
+[h264 @ 0x32a6ec0] thread_get_buffer() failed
+[h264 @ 0x32a6ec0] decode_slice_header error
+[h264 @ 0x32a6ec0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32a6ec0] get_buffer() failed
+[h264 @ 0x32a6ec0] thread_get_buffer() failed
+[h264 @ 0x32a6ec0] decode_slice_header error
+[h264 @ 0x32a6ec0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x3298d00] get_buffer() failed
+[h264 @ 0x3298d00] thread_get_buffer() failed
+[h264 @ 0x3298d00] decode_slice_header error
+[h264 @ 0x3298d00] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x3298d00] get_buffer() failed
+[h264 @ 0x3298d00] thread_get_buffer() failed
+[h264 @ 0x3298d00] decode_slice_header error
+[h264 @ 0x3298d00] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input|size=      96kB time=00:00:48.11 bitrate=  16.3kbits/s speed=3.21x
+[h264 @ 0x32c3340] get_buffer() failed
+[h264 @ 0x32c3340] thread_get_buffer() failed
+[h264 @ 0x32c3340] decode_slice_header error
+[h264 @ 0x32c3340] no frame!
+[h264 @ 0x32dfac0] Missing reference picture, default is 65536
+[h264 @ 0x3298d00] Missing reference picture, default is 65536
+[h264 @ 0x3243100] Missing reference picture, default is 65542
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32a6ec0] Missing reference picture, default is 65554
+[h264 @ 0x32c3340] get_buffer() failed
+[h264 @ 0x32c3340] thread_get_buffer() failed
+[h264 @ 0x32c3340] decode_slice_header error
+[h264 @ 0x32c3340] no frame!
+[h264 @ 0x32dfac0] Missing reference picture, default is 65554
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32c3340] get_buffer() failed
+[h264 @ 0x32c3340] thread_get_buffer() failed
+[h264 @ 0x32c3340] decode_slice_header error
+[h264 @ 0x32c3340] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32c3340] get_buffer() failed
+[h264 @ 0x32c3340] thread_get_buffer() failed
+[h264 @ 0x32c3340] decode_slice_header error
+[h264 @ 0x32c3340] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32a6ec0] get_buffer() failed
+[h264 @ 0x32a6ec0] thread_get_buffer() failed
+[h264 @ 0x32a6ec0] decode_slice_header error
+[h264 @ 0x32a6ec0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x3298d00] get_buffer() failed
+[h264 @ 0x3298d00] thread_get_buffer() failed
+[h264 @ 0x3298d00] decode_slice_header error
+[h264 @ 0x3298d00] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input|size=     105kB time=00:00:52.75 bitrate=  16.3kbits/s speed= 3.4x
+[h264 @ 0x3298d00] get_buffer() failed
+[h264 @ 0x3298d00] thread_get_buffer() failed
+[h264 @ 0x3298d00] decode_slice_header error
+[h264 @ 0x3298d00] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32a6ec0] get_buffer() failed
+[h264 @ 0x32a6ec0] thread_get_buffer() failed
+[h264 @ 0x32a6ec0] decode_slice_header error
+[h264 @ 0x32a6ec0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32a6ec0] get_buffer() failed66 | fps without filter init=145.30 |size=     112kB time=00:00:57.25 bitrate=  16.0kbits/s speed=3.58x
+[h264 @ 0x32a6ec0] thread_get_buffer() failed
+[h264 @ 0x32a6ec0] decode_slice_header error
+[h264 @ 0x32a6ec0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32dfac0] get_buffer() failed
+[h264 @ 0x32dfac0] thread_get_buffer() failed
+[h264 @ 0x32dfac0] decode_slice_header error
+[h264 @ 0x32dfac0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x3298d00] get_buffer() failed
+[h264 @ 0x3298d00] thread_get_buffer() failed
+[h264 @ 0x3298d00] decode_slice_header error
+[h264 @ 0x3298d00] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32c3340] get_buffer() failed
+[h264 @ 0x32c3340] thread_get_buffer() failed
+[h264 @ 0x32c3340] decode_slice_header error
+[h264 @ 0x32c3340] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32a6ec0] get_buffer() failed.76 | fps without filter init=150.67 |size=     121kB time=00:01:01.82 bitrate=  16.0kbits/s speed=3.75x
+[h264 @ 0x32a6ec0] thread_get_buffer() failed
+[h264 @ 0x32a6ec0] decode_slice_header error
+[h264 @ 0x32a6ec0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x3298d00] get_buffer() failed
+[h264 @ 0x3298d00] thread_get_buffer() failed
+[h264 @ 0x3298d00] decode_slice_header error
+[h264 @ 0x3298d00] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32a6ec0] get_buffer() failed
+[h264 @ 0x32a6ec0] thread_get_buffer() failed
+[h264 @ 0x32a6ec0] decode_slice_header error
+[h264 @ 0x32a6ec0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32a6ec0] get_buffer() failed.50 | fps without filter init=155.49 |size=     125kB time=00:01:06.29 bitrate=  15.4kbits/s speed= 3.9x
+[h264 @ 0x32a6ec0] thread_get_buffer() failed
+[h264 @ 0x32a6ec0] decode_slice_header error
+[h264 @ 0x32a6ec0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32c3340] get_buffer() failed
+[h264 @ 0x32c3340] thread_get_buffer() failed
+[h264 @ 0x32c3340] decode_slice_header error
+[h264 @ 0x32c3340] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x3298d00] get_buffer() failed
+[h264 @ 0x3298d00] thread_get_buffer() failed
+[h264 @ 0x3298d00] decode_slice_header error
+[h264 @ 0x3298d00] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32c3340] get_buffer() failed
+[h264 @ 0x32c3340] thread_get_buffer() failed
+[h264 @ 0x32c3340] decode_slice_header error
+[h264 @ 0x32c3340] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32c3340] get_buffer() failed
+[h264 @ 0x32c3340] thread_get_buffer() failed
+[h264 @ 0x32c3340] decode_slice_header error
+[h264 @ 0x32c3340] no frame!
+[h264 @ 0x3243100] get_buffer() failed
+[h264 @ 0x3243100] thread_get_buffer() failed
+[h264 @ 0x3243100] decode_slice_header error
+[h264 @ 0x3243100] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+    Last message repeated 1 times
+[h264 @ 0x3243100] get_buffer() failed
+[h264 @ 0x3243100] thread_get_buffer() failed
+[h264 @ 0x3243100] decode_slice_header error
+[h264 @ 0x3243100] no frame!
+[h264 @ 0x32dfac0] get_buffer() failed
+[h264 @ 0x32dfac0] thread_get_buffer() failed
+[h264 @ 0x32dfac0] decode_slice_header error
+[h264 @ 0x32dfac0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x3243100] get_buffer() failed
+[h264 @ 0x3243100] thread_get_buffer() failed
+[h264 @ 0x3243100] decode_slice_header error
+[h264 @ 0x3243100] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32c3340] get_buffer() failed
+[h264 @ 0x32c3340] thread_get_buffer() failed
+[h264 @ 0x32c3340] decode_slice_header error
+[h264 @ 0x32c3340] no frame!
+[h264 @ 0x32dfac0] Missing reference picture, default is 0
+[h264 @ 0x32dfac0] decode_slice_header error
+[h264 @ 0x32dfac0] Failed to upload decode parameters: 18 (invalid parameter).
+[h264 @ 0x32dfac0] Failed to end picture decode after error: 18 (invalid parameter).
+[h264 @ 0x32dfac0] hardware accelerator failed to decode picture
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x3298d00] Missing reference picture, default is 65542
+[h264 @ 0x3243100] get_buffer() failed
+[h264 @ 0x3243100] thread_get_buffer() failed
+[h264 @ 0x3243100] decode_slice_header error
+[h264 @ 0x3243100] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32a6ec0] Missing reference picture, default is 65542
+Error while decoding stream #0:0: Input/output error
+[h264 @ 0x32c3340] get_buffer() failed
+[h264 @ 0x32c3340] thread_get_buffer() failed
+[h264 @ 0x32c3340] decode_slice_header error
+[h264 @ 0x32c3340] no frame!
+[h264 @ 0x32dfac0] Missing reference picture, default is 65548
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x3298d00] Missing reference picture, default is 65548
+[h264 @ 0x3243100] Missing reference picture, default is 65554
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32a6ec0] Missing reference picture, default is 65554
+[h264 @ 0x32c3340] get_buffer() failed
+[h264 @ 0x32c3340] thread_get_buffer() failed
+[h264 @ 0x32c3340] decode_slice_header error
+[h264 @ 0x32c3340] no frame!
+[h264 @ 0x32dfac0] Missing reference picture, default is 65548
+[h264 @ 0x3298d00] Missing reference picture, default is 65548
+[h264 @ 0x3243100] Missing reference picture, default is 65554
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32dfac0] get_buffer() failed
+[h264 @ 0x32dfac0] thread_get_buffer() failed
+[h264 @ 0x32dfac0] decode_slice_header error
+[h264 @ 0x32dfac0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x3243100] get_buffer() failed
+[h264 @ 0x3243100] thread_get_buffer() failed
+[h264 @ 0x3243100] decode_slice_header error
+[h264 @ 0x3243100] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x3243100] get_buffer() failed.68 | fps without filter init=159.50 |size=     138kB time=00:01:11.73 bitrate=  15.7kbits/s speed= 4.1x
+[h264 @ 0x3243100] thread_get_buffer() failed
+[h264 @ 0x3243100] decode_slice_header error
+[h264 @ 0x3243100] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32a6ec0] get_buffer() failed
+[h264 @ 0x32a6ec0] thread_get_buffer() failed
+[h264 @ 0x32a6ec0] decode_slice_header error
+[h264 @ 0x32a6ec0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32dfac0] get_buffer() failed
+[h264 @ 0x32dfac0] thread_get_buffer() failed
+[h264 @ 0x32dfac0] decode_slice_header error
+[h264 @ 0x32dfac0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32dfac0] get_buffer() failed
+[h264 @ 0x32dfac0] thread_get_buffer() failed
+[h264 @ 0x32dfac0] decode_slice_header error
+[h264 @ 0x32dfac0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32a6ec0] get_buffer() failed
+[h264 @ 0x32a6ec0] thread_get_buffer() failed
+[h264 @ 0x32a6ec0] decode_slice_header error
+[h264 @ 0x32a6ec0] no frame!
+[h264 @ 0x32dfac0] get_buffer() failed
+[h264 @ 0x32dfac0] thread_get_buffer() failed
+[h264 @ 0x32dfac0] decode_slice_header error
+[h264 @ 0x32dfac0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+    Last message repeated 1 times
+[h264 @ 0x32dfac0] get_buffer() failed
+[h264 @ 0x32dfac0] thread_get_buffer() failed
+[h264 @ 0x32dfac0] decode_slice_header error
+[h264 @ 0x32dfac0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32a6ec0] get_buffer() failed
+[h264 @ 0x32a6ec0] thread_get_buffer() failed
+[h264 @ 0x32a6ec0] decode_slice_header error
+[h264 @ 0x32a6ec0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32a6ec0] get_buffer() failed
+[h264 @ 0x32a6ec0] thread_get_buffer() failed
+[h264 @ 0x32a6ec0] decode_slice_header error
+[h264 @ 0x32a6ec0] no frame!
+[h264 @ 0x32dfac0] get_buffer() failed
+[h264 @ 0x32dfac0] thread_get_buffer() failed
+[h264 @ 0x32dfac0] decode_slice_header error
+[h264 @ 0x32dfac0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+    Last message repeated 1 times
+[h264 @ 0x3298d00] get_buffer() failed
+[h264 @ 0x3298d00] thread_get_buffer() failed
+[h264 @ 0x3298d00] decode_slice_header error
+[h264 @ 0x3298d00] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input |size=     150kB time=00:01:16.24 bitrate=  16.1kbits/s speed=4.24x
+[h264 @ 0x32a6ec0] get_buffer() failed
+[h264 @ 0x32a6ec0] thread_get_buffer() failed
+[h264 @ 0x32a6ec0] decode_slice_header error
+[h264 @ 0x32a6ec0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32a6ec0] get_buffer() failed
+[h264 @ 0x32a6ec0] thread_get_buffer() failed
+[h264 @ 0x32a6ec0] decode_slice_header error
+[h264 @ 0x32a6ec0] no frame!
+[h264 @ 0x32dfac0] get_buffer() failed
+[h264 @ 0x32dfac0] thread_get_buffer() failed
+[h264 @ 0x32dfac0] decode_slice_header error
+[h264 @ 0x32dfac0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32a6ec0] get_buffer() failed
+[h264 @ 0x32a6ec0] thread_get_buffer() failed
+[h264 @ 0x32a6ec0] decode_slice_header error
+[h264 @ 0x32a6ec0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32c3340] Missing reference picture, default is 65536
+[h264 @ 0x32dfac0] Missing reference picture, default is 65536
+[h264 @ 0x3298d00] Missing reference picture, default is 65538
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x3243100] Missing reference picture, default is 65554
+[h264 @ 0x32a6ec0] get_buffer() failed
+[h264 @ 0x32a6ec0] thread_get_buffer() failed
+[h264 @ 0x32a6ec0] decode_slice_header error
+[h264 @ 0x32a6ec0] no frame!
+[h264 @ 0x32c3340] Missing reference picture, default is 65554
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32a6ec0] get_buffer() failed
+[h264 @ 0x32a6ec0] thread_get_buffer() failed
+[h264 @ 0x32a6ec0] decode_slice_header error
+[h264 @ 0x32a6ec0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32a6ec0] get_buffer() failed
+[h264 @ 0x32a6ec0] thread_get_buffer() failed
+[h264 @ 0x32a6ec0] decode_slice_header error
+[h264 @ 0x32a6ec0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32a6ec0] get_buffer() failed
+[h264 @ 0x32a6ec0] thread_get_buffer() failed
+[h264 @ 0x32a6ec0] decode_slice_header error
+[h264 @ 0x32a6ec0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32a6ec0] get_buffer() failed
+[h264 @ 0x32a6ec0] thread_get_buffer() failed
+[h264 @ 0x32a6ec0] decode_slice_header error
+[h264 @ 0x32a6ec0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32dfac0] get_buffer() failed
+[h264 @ 0x32dfac0] thread_get_buffer() failed
+[h264 @ 0x32dfac0] decode_slice_header error
+[h264 @ 0x32dfac0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32a6ec0] get_buffer() failed.02 | fps without filter init=167.50 |size=     174kB time=00:01:21.31 bitrate=  17.6kbits/s speed= 4.4x
+[h264 @ 0x32a6ec0] thread_get_buffer() failed
+[h264 @ 0x32a6ec0] decode_slice_header error
+[h264 @ 0x32a6ec0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32c3340] get_buffer() failed
+[h264 @ 0x32c3340] thread_get_buffer() failed
+[h264 @ 0x32c3340] decode_slice_header error
+[h264 @ 0x32c3340] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32c3340] get_buffer() failed
+[h264 @ 0x32c3340] thread_get_buffer() failed
+[h264 @ 0x32c3340] decode_slice_header error
+[h264 @ 0x32c3340] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32a6ec0] get_buffer() failed.69 | fps without filter init=170.83 |size=     174kB time=00:01:25.68 bitrate=  16.7kbits/s speed=4.51x
+[h264 @ 0x32a6ec0] thread_get_buffer() failed
+[h264 @ 0x32a6ec0] decode_slice_header error
+[h264 @ 0x32a6ec0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32c3340] get_buffer() failed
+[h264 @ 0x32c3340] thread_get_buffer() failed
+[h264 @ 0x32c3340] decode_slice_header error
+[h264 @ 0x32c3340] no frame!
+[h264 @ 0x3243100] get_buffer() failed
+[h264 @ 0x3243100] thread_get_buffer() failed
+[h264 @ 0x3243100] decode_slice_header error
+[h264 @ 0x3243100] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32c3340] get_buffer() failed
+[h264 @ 0x32c3340] thread_get_buffer() failed
+[h264 @ 0x32c3340] decode_slice_header error
+[h264 @ 0x32c3340] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x3243100] get_buffer() failed
+[h264 @ 0x3243100] thread_get_buffer() failed
+[h264 @ 0x3243100] decode_slice_header error
+[h264 @ 0x3243100] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32c3340] get_buffer() failed
+[h264 @ 0x32c3340] thread_get_buffer() failed
+[h264 @ 0x32c3340] decode_slice_header error
+[h264 @ 0x32c3340] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x3243100] get_buffer() failed
+[h264 @ 0x3243100] thread_get_buffer() failed
+[h264 @ 0x3243100] decode_slice_header error
+[h264 @ 0x3243100] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32c3340] get_buffer() failed
+[h264 @ 0x32c3340] thread_get_buffer() failed
+[h264 @ 0x32c3340] decode_slice_header error
+[h264 @ 0x32c3340] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x3243100] get_buffer() failed
+[h264 @ 0x3243100] thread_get_buffer() failed
+[h264 @ 0x3243100] decode_slice_header error
+[h264 @ 0x3243100] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32c3340] get_buffer() failed
+[h264 @ 0x32c3340] thread_get_buffer() failed
+[h264 @ 0x32c3340] decode_slice_header error
+[h264 @ 0x32c3340] no frame!
+[h264 @ 0x32dfac0] Missing reference picture, default is 0
+[h264 @ 0x32dfac0] decode_slice_header error
+[h264 @ 0x32dfac0] Failed to upload decode parameters: 18 (invalid parameter).
+[h264 @ 0x32dfac0] Failed to end picture decode after error: 18 (invalid parameter).
+[h264 @ 0x32dfac0] hardware accelerator failed to decode picture
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x3298d00] Missing reference picture, default is 65542
+[h264 @ 0x3243100] get_buffer() failed
+[h264 @ 0x3243100] thread_get_buffer() failed
+[h264 @ 0x3243100] decode_slice_header error
+[h264 @ 0x3243100] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32a6ec0] Missing reference picture, default is 65542
+Error while decoding stream #0:0: Input/output error
+[h264 @ 0x32c3340] get_buffer() failed
+[h264 @ 0x32c3340] thread_get_buffer() failed
+[h264 @ 0x32c3340] decode_slice_header error
+[h264 @ 0x32c3340] no frame!
+[h264 @ 0x32dfac0] Missing reference picture, default is 65546
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x3298d00] get_buffer() failed
+[h264 @ 0x3298d00] thread_get_buffer() failed
+[h264 @ 0x3298d00] decode_slice_header error
+[h264 @ 0x3298d00] no frame!
+[h264 @ 0x3243100] Missing reference picture, default is 65550
+Error while decoding stream #0:0: Invalid data found when processing input
+    Last message repeated 1 times
+[h264 @ 0x32dfac0] get_buffer() failed
+[h264 @ 0x32dfac0] thread_get_buffer() failed
+[h264 @ 0x32dfac0] decode_slice_header error
+[h264 @ 0x32dfac0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32dfac0] get_buffer() failed.18 | fps without filter init=173.92 |size=     190kB time=00:01:31.22 bitrate=  17.0kbits/s speed=4.68x
+[h264 @ 0x32dfac0] thread_get_buffer() failed
+[h264 @ 0x32dfac0] decode_slice_header error
+[h264 @ 0x32dfac0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x3298d00] get_buffer() failed
+[h264 @ 0x3298d00] thread_get_buffer() failed
+[h264 @ 0x3298d00] decode_slice_header error
+[h264 @ 0x3298d00] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32dfac0] get_buffer() failed
+[h264 @ 0x32dfac0] thread_get_buffer() failed
+[h264 @ 0x32dfac0] decode_slice_header error
+[h264 @ 0x32dfac0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x3243100] get_buffer() failed
+[h264 @ 0x3243100] thread_get_buffer() failed
+[h264 @ 0x3243100] decode_slice_header error
+[h264 @ 0x3243100] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32a6ec0] get_buffer() failed
+[h264 @ 0x32a6ec0] thread_get_buffer() failed
+[h264 @ 0x32a6ec0] decode_slice_header error
+[h264 @ 0x32a6ec0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input |size=     190kB time=00:01:35.46 bitrate=  16.3kbits/s speed=4.77x
+[h264 @ 0x32c3340] get_buffer() failed
+[h264 @ 0x32c3340] thread_get_buffer() failed
+[h264 @ 0x32c3340] decode_slice_header error
+[h264 @ 0x32c3340] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32a6ec0] get_buffer() failed
+[h264 @ 0x32a6ec0] thread_get_buffer() failed
+[h264 @ 0x32a6ec0] decode_slice_header error
+[h264 @ 0x32a6ec0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x3243100] get_buffer() failed
+[h264 @ 0x3243100] thread_get_buffer() failed
+[h264 @ 0x3243100] decode_slice_header error
+[h264 @ 0x3243100] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32a6ec0] get_buffer() failed
+[h264 @ 0x32a6ec0] thread_get_buffer() failed
+[h264 @ 0x32a6ec0] decode_slice_header error
+[h264 @ 0x32a6ec0] no frame!
+[h264 @ 0x32dfac0] get_buffer() failed
+[h264 @ 0x32dfac0] thread_get_buffer() failed
+[h264 @ 0x32dfac0] decode_slice_header error
+[h264 @ 0x32dfac0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+    Last message repeated 1 times
+[h264 @ 0x32dfac0] get_buffer() failed
+[h264 @ 0x32dfac0] thread_get_buffer() failed
+[h264 @ 0x32dfac0] decode_slice_header error
+[h264 @ 0x32dfac0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32c3340] get_buffer() failed
+[h264 @ 0x32c3340] thread_get_buffer() failed
+[h264 @ 0x32c3340] decode_slice_header error
+[h264 @ 0x32c3340] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x3243100] get_buffer() failed
+[h264 @ 0x3243100] thread_get_buffer() failed
+[h264 @ 0x3243100] decode_slice_header error
+[h264 @ 0x3243100] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input |size=     205kB time=00:01:40.06 bitrate=  16.7kbits/s speed=4.88x
+[h264 @ 0x32a6ec0] get_buffer() failed
+[h264 @ 0x32a6ec0] thread_get_buffer() failed
+[h264 @ 0x32a6ec0] decode_slice_header error
+[h264 @ 0x32a6ec0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32dfac0] get_buffer() failed
+[h264 @ 0x32dfac0] thread_get_buffer() failed
+[h264 @ 0x32dfac0] decode_slice_header error
+[h264 @ 0x32dfac0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x3243100] get_buffer() failed
+[h264 @ 0x3243100] thread_get_buffer() failed
+[h264 @ 0x3243100] decode_slice_header error
+[h264 @ 0x3243100] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x3243100] get_buffer() failed
+[h264 @ 0x3243100] thread_get_buffer() failed
+[h264 @ 0x3243100] decode_slice_header error
+[h264 @ 0x3243100] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32c3340] get_buffer() failed
+[h264 @ 0x32c3340] thread_get_buffer() failed
+[h264 @ 0x32c3340] decode_slice_header error
+[h264 @ 0x32c3340] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32a6ec0] get_buffer() failed.66 | fps without filter init=182.02 |size=     205kB time=00:01:44.73 bitrate=  16.0kbits/s speed=4.99x
+[h264 @ 0x32a6ec0] thread_get_buffer() failed
+[h264 @ 0x32a6ec0] decode_slice_header error
+[h264 @ 0x32a6ec0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x3243100] get_buffer() failed
+[h264 @ 0x3243100] thread_get_buffer() failed
+[h264 @ 0x3243100] decode_slice_header error
+[h264 @ 0x3243100] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x3243100] get_buffer() failed
+[h264 @ 0x3243100] thread_get_buffer() failed
+[h264 @ 0x3243100] decode_slice_header error
+[h264 @ 0x3243100] no frame!
+[h264 @ 0x32dfac0] get_buffer() failed
+[h264 @ 0x32dfac0] thread_get_buffer() failed
+[h264 @ 0x32dfac0] decode_slice_header error
+[h264 @ 0x32dfac0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+    Last message repeated 1 times
+[h264 @ 0x32dfac0] get_buffer() failed
+[h264 @ 0x32dfac0] thread_get_buffer() failed
+[h264 @ 0x32dfac0] decode_slice_header error
+[h264 @ 0x32dfac0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32dfac0] get_buffer() failed
+[h264 @ 0x32dfac0] thread_get_buffer() failed
+[h264 @ 0x32dfac0] decode_slice_header error
+[h264 @ 0x32dfac0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32a6ec0] get_buffer() failed
+[h264 @ 0x32a6ec0] thread_get_buffer() failed
+[h264 @ 0x32a6ec0] decode_slice_header error
+[h264 @ 0x32a6ec0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32a6ec0] get_buffer() failed
+[h264 @ 0x32a6ec0] thread_get_buffer() failed
+[h264 @ 0x32a6ec0] decode_slice_header error
+[h264 @ 0x32a6ec0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32a6ec0] get_buffer() failed
+[h264 @ 0x32a6ec0] thread_get_buffer() failed
+[h264 @ 0x32a6ec0] decode_slice_header error
+[h264 @ 0x32a6ec0] no frame!
+[h264 @ 0x3298d00] get_buffer() failed
+[h264 @ 0x3298d00] thread_get_buffer() failed
+[h264 @ 0x3298d00] decode_slice_header error
+[h264 @ 0x3298d00] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32a6ec0] get_buffer() failed
+[h264 @ 0x32a6ec0] thread_get_buffer() failed
+[h264 @ 0x32a6ec0] decode_slice_header error
+[h264 @ 0x32a6ec0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+    Last message repeated 1 times
+[h264 @ 0x3243100] get_buffer() failed
+[h264 @ 0x3243100] thread_get_buffer() failed
+[h264 @ 0x3243100] decode_slice_header error
+[h264 @ 0x3243100] no frame!
+[h264 @ 0x32c3340] get_buffer() failed
+[h264 @ 0x32c3340] thread_get_buffer() failed
+[h264 @ 0x32c3340] decode_slice_header error
+[h264 @ 0x32c3340] no frame!
+[h264 @ 0x32dfac0] get_buffer() failed
+[h264 @ 0x32dfac0] thread_get_buffer() failed
+[h264 @ 0x32dfac0] decode_slice_header error
+[h264 @ 0x32dfac0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x3243100] get_buffer() failed
+[h264 @ 0x3243100] thread_get_buffer() failed
+[h264 @ 0x3243100] decode_slice_header error
+[h264 @ 0x3243100] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32a6ec0] Missing reference picture, default is 65536
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32c3340] Missing reference picture, default is 65536
+[h264 @ 0x32dfac0] get_buffer() failed
+[h264 @ 0x32dfac0] thread_get_buffer() failed
+[h264 @ 0x32dfac0] decode_slice_header error
+[h264 @ 0x32dfac0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x3298d00] Missing reference picture, default is 65538
+[h264 @ 0x3298d00] Missing reference picture, default is 65536
+    Last message repeated 1 times
+[h264 @ 0x3243100] get_buffer() failed
+[h264 @ 0x3243100] thread_get_buffer() failed
+[h264 @ 0x3243100] decode_slice_header error
+[h264 @ 0x3243100] no frame!
+[h264 @ 0x32a6ec0] Missing reference picture, default is 65538
+    Last message repeated 1 times
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32c3340] Missing reference picture, default is 65560
+[h264 @ 0x32dfac0] get_buffer() failed
+[h264 @ 0x32dfac0] thread_get_buffer() failed
+[h264 @ 0x32dfac0] decode_slice_header error
+[h264 @ 0x32dfac0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x3298d00] Missing reference picture, default is 65560
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32dfac0] Missing reference picture, default is 65572
+[h264 @ 0x3298d00] Missing reference picture, default is 65572
+[h264 @ 0x3243100] Missing reference picture, default is 65572
+[h264 @ 0x32a6ec0] get_buffer() failed
+[h264 @ 0x32a6ec0] thread_get_buffer() failed
+[h264 @ 0x32a6ec0] decode_slice_header error
+[h264 @ 0x32a6ec0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32dfac0] get_buffer() failed
+[h264 @ 0x32dfac0] thread_get_buffer() failed
+[h264 @ 0x32dfac0] decode_slice_header error
+[h264 @ 0x32dfac0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32a6ec0] get_buffer() failed.66 | fps without filter init=184.57 |size=     242kB time=00:01:49.50 bitrate=  18.1kbits/s speed=5.09x
+[h264 @ 0x32a6ec0] thread_get_buffer() failed
+[h264 @ 0x32a6ec0] decode_slice_header error
+[h264 @ 0x32a6ec0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32a6ec0] get_buffer() failed
+[h264 @ 0x32a6ec0] thread_get_buffer() failed
+[h264 @ 0x32a6ec0] decode_slice_header error
+[h264 @ 0x32a6ec0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x3243100] get_buffer() failed
+[h264 @ 0x3243100] thread_get_buffer() failed
+[h264 @ 0x3243100] decode_slice_header error
+[h264 @ 0x3243100] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x3243100] get_buffer() failed
+[h264 @ 0x3243100] thread_get_buffer() failed
+[h264 @ 0x3243100] decode_slice_header error
+[h264 @ 0x3243100] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x3243100] get_buffer() failed
+[h264 @ 0x3243100] thread_get_buffer() failed
+[h264 @ 0x3243100] decode_slice_header error
+[h264 @ 0x3243100] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32dfac0] get_buffer() failed
+[h264 @ 0x32dfac0] thread_get_buffer() failed
+[h264 @ 0x32dfac0] decode_slice_header error
+[h264 @ 0x32dfac0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32dfac0] get_buffer() failed.53 | fps without filter init=186.96 |size=     244kB time=00:01:54.41 bitrate=  17.5kbits/s speed= 5.2x
+[h264 @ 0x32dfac0] thread_get_buffer() failed
+[h264 @ 0x32dfac0] decode_slice_header error
+[h264 @ 0x32dfac0] no frame!
+[h264 @ 0x32a6ec0] get_buffer() failed
+[h264 @ 0x32a6ec0] thread_get_buffer() failed
+[h264 @ 0x32a6ec0] decode_slice_header error
+[h264 @ 0x32a6ec0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32dfac0] get_buffer() failed
+[h264 @ 0x32dfac0] thread_get_buffer() failed
+[h264 @ 0x32dfac0] decode_slice_header error
+[h264 @ 0x32dfac0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32a6ec0] get_buffer() failed
+[h264 @ 0x32a6ec0] thread_get_buffer() failed
+[h264 @ 0x32a6ec0] decode_slice_header error
+[h264 @ 0x32a6ec0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32dfac0] get_buffer() failed
+[h264 @ 0x32dfac0] thread_get_buffer() failed
+[h264 @ 0x32dfac0] decode_slice_header error
+[h264 @ 0x32dfac0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+    Last message repeated 1 times
+[h264 @ 0x32dfac0] get_buffer() failed
+[h264 @ 0x32dfac0] thread_get_buffer() failed
+[h264 @ 0x32dfac0] decode_slice_header error
+[h264 @ 0x32dfac0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[h264 @ 0x32dfac0] get_buffer() failed
+[h264 @ 0x32dfac0] thread_get_buffer() failed
+[h264 @ 0x32dfac0] decode_slice_header error
+[h264 @ 0x32dfac0] no frame!
+Error while decoding stream #0:0: Invalid data found when processing input
+[Parsed_detect_0 @ 0x368db00] Get EOS..27 | fps without filter init=189.21 |size=     260kB time=00:01:58.81 bitrate=  18.0kbits/s speed=5.28x
+output:37 processed:0
+    Last message repeated 1 times
+output:31 processed:6
+output:30 processed:6
+output:30 processed:5
+output:30 processed:4
+output:30 processed:3
+output:30 processed:2
+output:30 processed:1
+output:30 processed:0
+    Last message repeated 1 times
+output:21 processed:9
+output:21 processed:8
+output:18 processed:10
+output:15 processed:12
+output:15 processed:11
+output:15 processed:10
+output:15 processed:9
+output:8 processed:15
+output:8 processed:14
+output:8 processed:13
+output:8 processed:12
+output:8 processed:11
+output:8 processed:10
+output:8 processed:9
+output:0 processed:16
+output:0 processed:15
+output:0 processed:14
+output:0 processed:13
+output:0 processed:12
+output:0 processed:11
+output:0 processed:10
+output:0 processed:9
+output:0 processed:8
+output:0 processed:7
+output:0 processed:6
+output:0 processed:5
+output:0 processed:4
+output:0 processed:3
+output:0 processed:2
+output:0 processed:1
+output:0 processed:0
+[Parsed_classify_1 @ 0x368ecc0] Get EOS.
+output:0 processed:0
+| profiling | total frame=3276 fps=143.84 | fps without filter init=189.25 |size=     260kB time=00:02:00.78 bitrate=  17.7kbits/s speed= 5.3x
+video:1715kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
+| filter profiling | name=detect, init=5121.94 ms, frame=3276, fps=1773.64
+[HDDLPlugin] [12:38:57.8901][28238]I[Dispatcher2.cpp:212] Info: Listen Thread wake up and to exit.
+[HDDLPlugin] [12:38:57.8903][28224]I[Dispatcher2.cpp:81] Info: Client dispatcher exit.
+[HDDLPlugin] [12:38:57.8908][28224]I[HddlClient.cpp:203] Info: Hddl client unregistered.
+[HDDLPlugin] [12:38:57.9952][28297]I[Dispatcher2.cpp:212] Info: Listen Thread wake up and to exit.
+[HDDLPlugin] [12:38:57.9954][28224]I[Dispatcher2.cpp:81] Info: Client dispatcher exit.
+[HDDLPlugin] [12:38:57.9956][28224]I[HddlClient.cpp:203] Info: Hddl client unregistered.

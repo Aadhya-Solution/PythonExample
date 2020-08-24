@@ -1,0 +1,105 @@
+root@vca_node_00:~# /root/ffva/ffmpeg/ffmpeg -profiling_all -flags unaligned -hwaccel vaapi -hwaccel_output_format vaapi -hwaccel_device /dev/dri/renderD128 -extra_hw_frames 16 -threads 1 -
+i 2min_videos/face-demographics-walking_2min.mp4 -vf detect=model=open_model_zoo/tools/downloader/Transportation/object_detection/face/pruned_mobilenet_reduced_ssd_shared_weights/dldt/FP16/face-detection-adas-0001.xml:model_proc=ffva/FFmpeg-patch/samples/model_proc/face-detection-adas-0001.json:interval=1:device=HDDL:nireq=8,classify=model=open_model_zoo/tools/downloader/Retail/object_reidentification/face/mobilenet_based/dldt/FP16/face-reidentification-retail-0095.xml:model_proc=ffva/FFmpeg-patch/samples/model_proc/vehicle-attributes-recognition-barrier-0039.json:interval=1:device=HDDL:nireq=8,identify=gallery=ffva/FFmpeg-patch/samples/shell/reidentification/gallery/gallery.json -an -f iemetadata face_with_proc.json
+ffmpeg version 4.1 Copyright (c) 2000-2018 the FFmpeg developers
+  built with gcc 5.4.0 (Ubuntu 5.4.0-6ubuntu1~16.04.10) 20160609
+  configuration: --prefix=/root/ffmpeg_build --pkg-config-flags=--static --extra-cflags=-I/root/ffmpeg_build/include --extra-ldflags=-L/root/ffmpeg_build/lib --extra-libs='-lpthread -lm' --bindir=/root/bin --enable-gpl --enable-openssl --enable-nonfree --enable-libdrm --disable-doc --disable-htmlpages --disable-manpages --disable-podpages --disable-txtpages --enable-libx264 --enable-libx265 --enable-librdkafka --enable-libjson_c --enable-libinference_engine_c_api
+  libavutil      56. 22.100 / 56. 22.100
+  libavcodec     58. 35.100 / 58. 35.100
+  libavformat    58. 20.100 / 58. 20.100
+  libavdevice    58.  5.100 / 58.  5.100
+  libavfilter     7. 40.101 /  7. 40.101
+  libswscale      5.  3.100 /  5.  3.100
+  libswresample   3.  3.100 /  3.  3.100
+  libpostproc    55.  3.100 / 55.  3.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '2min_videos/face-demographics-walking_2min.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf58.20.100
+  Duration: 00:02:11.58, start: 0.000000, bitrate: 10050 kb/s
+    Stream #0:0(eng): Video: h264 (Main) (avc1 / 0x31637661), yuv420p(tv, bt709), 1920x1080, 10042 kb/s, 49.99 fps, 50 tbr, 50k tbn, 100 tbc (default)
+    Metadata:
+      handler_name    : ?Mainconcept Video Media Handler
+    Stream #0:1(eng): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 2 kb/s (default)
+    Metadata:
+      handler_name    : #Mainconcept MP4 Sound Media Handler
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> wrapped_avframe (native))
+Press [q] to stop, [?] for help
+Loading model: device=HDDL, path=open_model_zoo/tools/downloader/Transportation/object_detection/face/pruned_mobilenet_reduced_ssd_shared_weights/dldt/FP16/face-detection-adas-0001.xml
+Setting batch_size=1, nireq=8
+Color Format:"BGR"
+labels: background face
+Avail devices: CPU GPU
+device = HDDL
+[07:15:34.4021][1447]I[ServiceStarter.cpp:40] Info: Waiting for HDDL Service getting ready ...
+[07:15:34.4022][1447]I[ServiceStarter.cpp:45] Info: Found HDDL Service is running.
+[HDDLPlugin] [07:15:34.4024][1447]I[HddlClient.cpp:256] Hddl api version: 2.2
+[HDDLPlugin] [07:15:34.4024][1447]I[HddlClient.cpp:259] Info: Create Dispatcher2.
+[HDDLPlugin] [07:15:34.4029][1458]I[Dispatcher2.cpp:148] Info: SenderRoutine starts.
+[HDDLPlugin] [07:15:34.4030][1447]I[HddlClient.cpp:270] Info: RegisterClient HDDLPlugin.
+[HDDLPlugin] [07:15:34.4034][1447]I[HddlClient.cpp:275] Client Id: 9
+[HDDLPlugin] [07:15:39.0079][1447]I[HddlBlob.cpp:166] Info: HddlBlob initialize ion ...
+[HDDLPlugin] [07:15:39.0079][1447]I[HddlBlob.cpp:176] Info: HddlBlob initialize ion successfully.
+libavfilter/inference_backend/image_inference_async_preproc.c:54 : ImageInferenceAsyncPreprocCreate      Using async preproc image inference.
+Loading model: device=HDDL, path=open_model_zoo/tools/downloader/Retail/object_reidentification/face/mobilenet_based/dldt/FP16/face-reidentification-retail-0095.xml
+Setting batch_size=1, nireq=8
+Object_class:"vehicle"
+labels: white gray yellow red green blue black
+labels: car van truck bus
+Avail devices: CPU GPU
+device = HDDL
+[HDDLPlugin] [07:15:39.1529][1447]I[ServiceStarter.cpp:40] Info: Waiting for HDDL Service getting ready ...
+[HDDLPlugin] [07:15:39.1530][1447]I[ServiceStarter.cpp:45] Info: Found HDDL Service is running.
+[HDDLPlugin] [07:15:39.1531][1447]I[HddlClient.cpp:256] Hddl api version: 2.2
+[HDDLPlugin] [07:15:39.1531][1447]I[HddlClient.cpp:259] Info: Create Dispatcher2.
+[HDDLPlugin] [07:15:39.1533][1517]I[Dispatcher2.cpp:148] Info: SenderRoutine starts.
+[HDDLPlugin] [07:15:39.1534][1447]I[HddlClient.cpp:270] Info: RegisterClient HDDLPlugin.
+[HDDLPlugin] [07:15:39.1537][1447]I[HddlClient.cpp:275] Client Id: 10
+libavfilter/inference_backend/image_inference_async_preproc.c:54 : ImageInferenceAsyncPreprocCreate      Using async preproc image inference.
+Output #0, iemetadata, to 'face_with_proc.json':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf58.20.100
+    Stream #0:0(eng): Video: wrapped_avframe, vaapi_vld, 1920x1080, q=2-31, 200 kb/s, 50 fps, 50 tbn, 50 tbc (default)
+    Metadata:
+      handler_name    : ?Mainconcept Video Media Handler
+      encoder         : Lavc58.35.100 wrapped_avframe
+[Parsed_detect_0 @ 0x3ae6480] init time:4803634
+[Parsed_classify_1 @ 0x3ae5800] init time:1137563
+[Parsed_identify_2 @ 0x3bbd700] init time:187
+[graph 0 input from stream 0:0 @ 0x3ae5a00] init time:23
+[out_0_0 @ 0x3bbd180] init time:1
+[Parsed_detect_0 @ 0x3ae6480] Get EOS.04 | fps without filter init=46.96 |size=    2028kB time=00:02:11.04 bitrate= 126.8kbits/s speed=0.901x
+output:14 processed:0
+output:6 processed:8
+output:4 processed:9
+output:4 processed:8
+output:4 processed:7
+output:4 processed:6
+output:4 processed:5
+output:4 processed:4
+output:4 processed:3
+output:4 processed:2
+output:4 processed:1
+output:4 processed:0
+    Last message repeated 5 times
+output:2 processed:2
+output:0 processed:3
+output:0 processed:2
+output:0 processed:1
+output:0 processed:0
+[Parsed_classify_1 @ 0x3ae5800] Get EOS. | fps without filter init=46.96 |size=    2028kB time=00:02:11.56 bitrate= 126.3kbits/s speed=0.901x
+output:0 processed:0
+| profiling | total frame=6576 fps=45.05 | fps without filter init=46.96 |size=    2028kB time=00:02:11.56 bitrate= 126.3kbits/s speed=0.901x
+video:3442kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
+| filter profiling | name=detect, init=4803.63 ms, frame=6576, fps=48.55
+[HDDLPlugin] [07:18:00.2675][1459]I[Dispatcher2.cpp:212] Info: Listen Thread wake up and to exit.
+[HDDLPlugin] [07:18:00.2675][1447]I[Dispatcher2.cpp:81] Info: Client dispatcher exit.
+[HDDLPlugin] [07:18:00.2678][1447]I[HddlClient.cpp:203] Info: Hddl client unregistered.
+[HDDLPlugin] [07:18:00.3698][1518]I[Dispatcher2.cpp:212] Info: Listen Thread wake up and to exit.
+[HDDLPlugin] [07:18:00.3699][1447]I[Dispatcher2.cpp:81] Info: Client dispatcher exit.
+[HDDLPlugin] [07:18:00.3700][1447]I[HddlClient.cpp:203] Info: Hddl client unregistered.

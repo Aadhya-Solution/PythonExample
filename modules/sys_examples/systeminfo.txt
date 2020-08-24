@@ -1,0 +1,69 @@
+C:\Users\admin\PycharmProjects\pythonExamples>systeminfo
+Host Name:                 SHASHIKANT
+OS Name:                   Microsoft Windows 10 Pro
+OS Version:                10.0.10586 N/A Build 10586
+OS Manufacturer:           Microsoft Corporation
+OS Configuration:          Standalone Workstation
+OS Build Type:             Multiprocessor Free
+Registered Owner:          admin
+Registered Organization:
+Product ID:                00330-80000-00000-AA236
+Original Install Date:     1/18/2016, 7:32:29 PM
+System Boot Time:          6/30/2016, 10:01:07 PM
+System Manufacturer:       LENOVO
+System Model:              2325JF7
+System Type:               x64-based PC
+Processor(s):              1 Processor(s) Installed.
+                           [01]: Intel64 Family 6 Model 58 Stepping 9 GenuineIntel ~1200 Mhz
+BIOS Version:              LENOVO G2ETA5WW (2.65 ), 9/17/2015
+Windows Directory:         C:\WINDOWS
+System Directory:          C:\WINDOWS\system32
+Boot Device:               \Device\HarddiskVolume1
+System Locale:             en-us;English (United States)
+Input Locale:              en-us;English (United States)
+Time Zone:                 (UTC+05:30) Chennai, Kolkata, Mumbai, New Delhi
+Total Physical Memory:     7,888 MB
+Available Physical Memory: 4,694 MB
+Virtual Memory: Max Size:  15,824 MB
+Virtual Memory: Available: 11,242 MB
+Virtual Memory: In Use:    4,582 MB
+Page File Location(s):     C:\pagefile.sys
+Domain:                    WORKGROUP
+Logon Server:              \\SHASHIKANT
+Hotfix(s):                 10 Hotfix(s) Installed.
+                           [01]: KB3124262
+                           [02]: KB3124263
+                           [03]: KB3135173
+                           [04]: KB3139907
+                           [05]: KB3140741
+                           [06]: KB3140743
+                           [07]: KB3140768
+                           [08]: KB3149135
+                           [09]: KB3167685
+                           [10]: KB3163018
+Network Card(s):           4 NIC(s) Installed.
+                           [01]: Intel(R) 82579LM Gigabit Network Connection
+                                 Connection Name: Local Area Connection 2
+                                 Status:          Media disconnected
+                           [02]: Intel(R) Centrino(R) Advanced-N 6205 Driver
+                                 Connection Name: Wireless Network Connection 2
+                                 DHCP Enabled:    Yes
+                                 DHCP Server:     192.168.1.1
+                                 IP address(es)
+                                 [01]: 192.168.1.107
+                                 [02]: fe80::8030:ac57:ce70:654a
+                           [03]: Bluetooth Device (Personal Area Network)
+                                 Connection Name: Bluetooth Network Connection 3
+                                 Status:          Media disconnected
+                           [04]: VirtualBox Host-Only Ethernet Adapter
+                                 Connection Name: VirtualBox Host-Only Network
+                                 DHCP Enabled:    No
+                                 IP address(es)
+                                 [01]: 192.168.56.1
+                                 [02]: fe80::43:8f54:eb06:415d
+Hyper-V Requirements:      VM Monitor Mode Extensions: Yes
+                           Virtualization Enabled In Firmware: Yes
+                           Second Level Address Translation: Yes
+                           Data Execution Prevention Available: Yes
+
+C:\Users\admin\PycharmProjects\pythonExamples>

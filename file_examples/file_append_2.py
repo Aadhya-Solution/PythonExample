@@ -1,0 +1,5 @@
+fo=open("a.txt",'a')
+print "Current position",fo.tell()
+fo.write(" feLIJJlfda")
+print "Current position",fo.tell()
+fo.close()

@@ -1,0 +1,5 @@
+fd=open("test.txt","w")
+fd.write("Hello Sita")
+fd.write("\n")
+fd.write("Hanuma")
+fd.close()

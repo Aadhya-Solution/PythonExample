@@ -1,0 +1,1123 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2019.11.15 11:45:44 =~=~=~=~=~=~=~=~=~=~=~=
+[K[A[A[A[A]0;root@vca_node_00: ~root@vca_node_00:~# /root/ffva/ffmpeg/ffmpeg -profiling_all -flags unaligned -hwaccel vaapi -hwaccel_output_format vaapi -hwaccel_device /dev/dri/renderD128 -extra_hw_frames 16 -i 2min_vide
+os/car-detection_1920_1080_2min.mp4 -threads 1 -vf detect=model=open_model_zoo/tools/downloader/Transportation/object_detection/vehicle/mobilenet-reduced-ssd/dldt/FP16/vehicle-detection-adass-0002.xml:model_proc=ffva/FFmpeg-patch/samples/model_proc/vehicle-detection-adas-0002.json:interval=1:device=HDDL:nireq=48,classify=model=open_model_zoo/tools/downloader/Security/object_atttributes/vehicle/resnet10_update_1/dldt/FP16/vehicle-attributes-recognition-barrier-0039.xml:model_proc=ffva/FFmpeg-patch/samples/model_proc/vehicle-attributes-recognition-barrier-0039.json  :interval=1:device=HDDL:nireq=48 -an -f iemetadata 1_out.json
+ffmpeg version 4.1 Copyright (c) 2000-2018 the FFmpeg developers
+  built with gcc 5.4.0 (Ubuntu 5.4.0-6ubuntu1~16.04.10) 20160609
+  configuration: --prefix=/root/ffmpeg_build --pkg-config-flags=--static --extra-cflags=-I/root/ffmpeg_build/include --extra-ldflags=-L/root/ffmpeg_build/lib --extra-libs='-lpthread -lm' --bindir=/root/bin --enable-gpl --enable-openssl --enable-nonfree --enable-libdrm --disable-doc --disable-htmlpages --disable-manpages --disable-podpages --disable-txtpages --enable-libx264 --enable-libx265 --enable-librdkafka --enable-libjson_c --enable-libinference_engine_c_api
+  libavutil      56. 22.100 / 56. 22.100
+  libavcodec     58. 35.100 / 58. 35.100
+  libavformat    58. 20.100 / 58. 20.100
+  libavdevice    58.  5.100 / 58.  5.100
+  libavfilter     7. 40.101 /  7. 40.101
+  libswscale      5.  3.100 /  5.  3.100
+  libswresample   3.  3.100 /  3.  3.100
+  libpostproc    55.  3.100 / 55.  3.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '2min_videos/car-detection_1920_1080_2min.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf58.20.100
+  Duration: 00:02:00.81, start: 0.000000, bitrate: 12591 kb/s
+    Stream #0:0(eng): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709), 1920x1080 [SAR 1:1 DAR 16:9], 12583 kb/s, 29.94 fps, 29.97 tbr, 30k tbn, 59.94 tbc (default)
+    Metadata:
+      handler_name    : ?Mainconcept Video Media Handler
+    Stream #0:1(eng): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 2 kb/s (default)
+    Metadata:
+      handler_name    : #Mainconcept MP4 Sound Media Handler
+[1;35m[NULL @ 0x2f5dbc0] [0m[1;31mUnable to find a suitable output format for ':interval=1:device=HDDL:nireq=48'
+[0m[1;31m:interval=1:device=HDDL:nireq=48: Invalid argument
+[0m]0;root@vca_node_00: ~root@vca_node_00:~# [K/root/ffva/ffmpeg/ffmpeg -profiling_all -flags unaligned -hwaccel vaapi -hwaccel_output_format vaapi -hwaccel_device /dev/dri/renderD128 -extra_hw_frames 16 -i 2min_videoos/car-detection_1920_1080_2min.mp4 -threads 1 -vf detect=model=open_model_zoo/tools/downloader/Transportation/object_detection/vehicle/mobilenet-reduced-ssd/dldt/FP16/vehicle-detection-adass-0002.xml:model_proc=ffva/FFmpeg-patch/samples/model_proc/vehicle-detection-adas-0002.json:interval=1:device=HDDL:nireq=48,classify=model=open_model_zoo/tools/downloader/Security/object_atttributes/vehicle/resnet10_update_1/dldt/FP16/vehicle-attributes-recognition-barrier-0039.xml:model_proc=ffva/FFmpeg-patch/samples/model_proc/vehicle-attributes-recognition-barrier-0039.json  :interval=1:device=HDDL:nireq=48 -an -f iemetadata 1_out.json[Atributes/vehicle/resnet10_update_1/dldt/FP16/vehicle-attributes-recognition-barrier-0039.xml:model_proc=ffva/FFmpeg-patch/samples/model_proc/vehicle-attributes-recognition-barrier-0039.jso[A[A[A]0;root@vca_node_00: ~root@vca_node_00:~# clear[K
+[K
+[K
+[K
+[K[A[A[A[Aroot@vca_node_00:~# clear/root/ffva/ffmpeg/ffmpeg -profiling_all -flags unaligned -hwaccel vaapi -hwaccel_output_format vaapi -hwaccel_device /dev/dri/renderD128 -extra_hw_frames 16 -i 2min_videoos/car-detection_1920_1080_2min.mp4 -threads 1 -vf detect=model=open_model_zoo/tools/downloader/Transportation/object_detection/vehicle/mobilenet-reduced-ssd/dldt/FP16/vehicle-detection-adass-0002.xml:model_proc=ffva/FFmpeg-patch/samples/model_proc/vehicle-detection-adas-0002.json:interval=1:device=HDDL:nireq=48,classify=model=open_model_zoo/tools/downloader/Security/object_atttributes/vehicle/resnet10_update_1/dldt/FP16/vehicle-attributes-recognition-barrier-0039.xml:model_proc=ffva/FFmpeg-patch/samples/model_proc/vehicle-attributes-recognition-barrier-0039.json  :interval=1:device=HDDL:nireq=48 -an -f iemetadata 1_out.jsonc1:[Atributes/vehicle/resnet10_update_1/dldt/FP16/vehicle-attributes-recognition-barrier-0039.xml:model_proc=ffva/FFmpeg-patch/samples/model_proc/vehicle-attributes-recognition-barrier-0039.jso
+ [1P[Atributes/vehicle/resnet10_update_1/dldt/FP16/vehicle-attributes-recognition-barrier-0039.xml:model_proc=ffva/FFmpeg-patch/samples/model_proc/vehicle-attributes-recognition-barrier-0039.jso:i[1P[Aributes/vehicle/resnet10_update_1/dldt/FP16/vehicle-attributes-recognition-barrier-0039.xml:model_proc=ffva/FFmpeg-patch/samples/model_proc/vehicle-attributes-recognition-barrier-0039.json:[1@i:interval=1:device=HDDL:nireq=48 -an -f iemetadata 1_out.json
+ffmpeg version 4.1 Copyright (c) 2000-2018 the FFmpeg developers
+  built with gcc 5.4.0 (Ubuntu 5.4.0-6ubuntu1~16.04.10) 20160609
+  configuration: --prefix=/root/ffmpeg_build --pkg-config-flags=--static --extra-cflags=-I/root/ffmpeg_build/include --extra-ldflags=-L/root/ffmpeg_build/lib --extra-libs='-lpthread -lm' --bindir=/root/bin --enable-gpl --enable-openssl --enable-nonfree --enable-libdrm --disable-doc --disable-htmlpages --disable-manpages --disable-podpages --disable-txtpages --enable-libx264 --enable-libx265 --enable-librdkafka --enable-libjson_c --enable-libinference_engine_c_api
+  libavutil      56. 22.100 / 56. 22.100
+  libavcodec     58. 35.100 / 58. 35.100
+  libavformat    58. 20.100 / 58. 20.100
+  libavdevice    58.  5.100 / 58.  5.100
+  libavfilter     7. 40.101 /  7. 40.101
+  libswscale      5.  3.100 /  5.  3.100
+  libswresample   3.  3.100 /  3.  3.100
+  libpostproc    55.  3.100 / 55.  3.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '2min_videos/car-detection_1920_1080_2min.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf58.20.100
+  Duration: 00:02:00.81, start: 0.000000, bitrate: 12591 kb/s
+    Stream #0:0(eng): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709), 1920x1080 [SAR 1:1 DAR 16:9], 12583 kb/s, 29.94 fps, 29.97 tbr, 30k tbn, 59.94 tbc (default)
+    Metadata:
+      handler_name    : ?Mainconcept Video Media Handler
+    Stream #0:1(eng): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 2 kb/s (default)
+    Metadata:
+      handler_name    : #Mainconcept MP4 Sound Media Handler
+File '1_out.json' already exists. Overwrite ? [y/N] y
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> wrapped_avframe (native))
+Press [q] to stop, [?] for help
+Loading model: device=HDDL, path=open_model_zoo/tools/downloader/Transportation/object_detection/vehicle/mobilenet-reduced-ssd/dldt/FP16/vehicle-detection-adas-0002.xml
+Setting batch_size=1, nireq=48
+Color Format:"BGR"
+labels: background vehicle 
+Avail devices: CPU GPU 
+device = HDDL
+[06:13:42.9774][11646]I[ServiceStarter.cpp:40] Info: Waiting for HDDL Service getting ready ...
+[06:13:42.9775][11646]I[ServiceStarter.cpp:45] Info: Found HDDL Service is running.
+[HDDLPlugin] [06:13:42.9777][11646]I[HddlClient.cpp:256] Hddl api version: 2.2
+[HDDLPlugin] [06:13:42.9777][11646]I[HddlClient.cpp:259] Info: Create Dispatcher2.
+[HDDLPlugin] [06:13:42.9782][11682]I[Dispatcher2.cpp:148] Info: SenderRoutine starts.
+[HDDLPlugin] [06:13:42.9783][11646]I[HddlClient.cpp:270] Info: RegisterClient HDDLPlugin.
+[HDDLPlugin] [06:13:42.9787][11646]I[HddlClient.cpp:275] Client Id: 1
+[HDDLPlugin] [06:13:47.9283][11646]I[HddlBlob.cpp:166] Info: HddlBlob initialize ion ...
+[HDDLPlugin] [06:13:47.9283][11646]I[HddlBlob.cpp:176] Info: HddlBlob initialize ion successfully.
+libavfilter/inference_backend/image_inference_async_preproc.c:54 : ImageInferenceAsyncPreprocCreate 	 Using async preproc image inference. 
+Loading model: device=HDDL, path=open_model_zoo/tools/downloader/Security/object_attributes/vehicle/resnet10_update_1/dldt/FP16/vehicle-attributes-recognition-barrier-0039.xml
+Setting batch_size=1, nireq=48
+Object_class:"vehicle"
+labels: white gray yellow red green blue black 
+labels: car van truck bus 
+Avail devices: CPU GPU 
+device = HDDL
+[HDDLPlugin] [06:13:48.0688][11646]I[ServiceStarter.cpp:40] Info: Waiting for HDDL Service getting ready ...
+[HDDLPlugin] [06:13:48.0688][11646]I[ServiceStarter.cpp:45] Info: Found HDDL Service is running.
+[HDDLPlugin] [06:13:48.0689][11646]I[HddlClient.cpp:256] Hddl api version: 2.2
+[HDDLPlugin] [06:13:48.0689][11646]I[HddlClient.cpp:259] Info: Create Dispatcher2.
+[HDDLPlugin] [06:13:48.0693][11741]I[Dispatcher2.cpp:148] Info: SenderRoutine starts.
+[HDDLPlugin] [06:13:48.0694][11646]I[HddlClient.cpp:270] Info: RegisterClient HDDLPlugin.
+[HDDLPlugin] [06:13:48.0697][11646]I[HddlClient.cpp:275] Client Id: 2
+libavfilter/inference_backend/image_inference_async_preproc.c:54 : ImageInferenceAsyncPreprocCreate 	 Using async preproc image inference. 
+Output #0, iemetadata, to '1_out.json':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf58.20.100
+    Stream #0:0(eng): Video: wrapped_avframe, vaapi_vld, 1920x1080 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 29.97 fps, 29.97 tbn, 29.97 tbc (default)
+    Metadata:
+      handler_name    : ?Mainconcept Video Media Handler
+      encoder         : Lavc58.35.100 wrapped_avframe
+[1;32m[Parsed_detect_0 @ 0x4193fc0] [0minit time:5154521
+[1;32m[Parsed_classify_1 @ 0x4195700] [0minit time:328305
+[1;32m[graph 0 input from stream 0:0 @ 0x4196d00] [0minit time:23
+[1;32m[out_0_0 @ 0x4197cc0] [0minit time:0
+| profiling | total frame=0 fps=0.00 |size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    [0;36m[h264 @ 0x3de5d00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mno frame!
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mno frame!
+[0m| profiling | total frame=20 fps=3.33 | fps without filter init=38.76 |size=       0kB time=00:00:00.66 bitrate=   0.0kbits/s speed=0.111x    [1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m    Last message repeated 1 times    Last message repeated 1 times
+[0;36m[h264 @ 0x3d9f100] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mno frame!
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mMissing reference picture, default is 65538
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mco located POCs unavailable
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mMissing reference picture, default is 65538
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mco located POCs unavailable
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mMissing reference picture, default is 65548
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mno frame!
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mno frame!
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mMissing reference picture, default is 65536
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mMissing reference picture, default is 65536
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mMissing reference picture, default is 65538
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mMissing reference picture, default is 65536
+[0m    Last message repeated 1 times    Last message repeated 1 times
+[0;36m[h264 @ 0x3d4ba00] [0m[1;31mMissing reference picture, default is 65538
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mMissing reference picture, default is 65536
+[0m    Last message repeated 1 times    Last message repeated 1 times
+| profiling | total frame=47 fps=7.23 | fps without filter init=46.23 |size=       0kB time=00:00:01.56 bitrate=   0.0kbits/s speed=0.241x    [0;36m[h264 @ 0x3dad140] [0m[1;31mMissing reference picture, default is 65538
+[0m    Last message repeated 1 times    Last message repeated 1 times
+[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mMissing reference picture, default is 65560
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mno frame!
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mMissing reference picture, default is 65560
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mno frame!
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mMissing reference picture, default is 65572
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mMissing reference picture, default is 65572
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mno frame!
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mno frame!
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mMissing reference picture, default is 65536
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mMissing reference picture, default is 65536
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mMissing reference picture, default is 65538
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mMissing reference picture, default is 65536
+[0m    Last message repeated 1 times    Last message repeated 1 times
+[0;36m[h264 @ 0x3d9f100] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mno frame!
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mMissing reference picture, default is 65538
+[0m    Last message repeated 1 times    Last message repeated 1 times
+[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mMissing reference picture, default is 65560
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mMissing reference picture, default is 65560
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mMissing reference picture, default is 65560
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mno frame!
+[0m| profiling | total frame=72 fps=10.29 | fps without filter init=47.46 |size=       0kB time=00:00:02.56 bitrate=   0.0kbits/s speed=0.367x    [0;36m[h264 @ 0x3dc9600] [0m[1;31mMissing reference picture, default is 65572
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mMissing reference picture, default is 65572
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mno frame!
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mMissing reference picture, default is 65566
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mMissing reference picture, default is 65566
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mMissing reference picture, default is 65572
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mno frame!
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mMissing reference picture, default is 0
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mFailed to upload decode parameters: 18 (invalid parameter).
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mFailed to end picture decode after error: 18 (invalid parameter).
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mhardware accelerator failed to decode picture
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mMissing reference picture, default is 65540
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mMissing reference picture, default is 65540
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mMissing reference picture, default is 65544
+[0m[1;31mError while decoding stream #0:0: Input/output error
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mno frame!
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mMissing reference picture, default is 65544
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mMissing reference picture, default is 65540
+[0m    Last message repeated 1 times    Last message repeated 1 times
+[0;36m[h264 @ 0x3dad140] [0m[1;31mMissing reference picture, default is 65544
+[0m    Last message repeated 1 times    Last message repeated 1 times
+[0;36m[h264 @ 0x3dc9600] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mMissing reference picture, default is 65552
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mno frame!
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m    Last message repeated 1 times    Last message repeated 1 times
+[0;36m[h264 @ 0x3de5d00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m| profiling | total frame=96 fps=12.80 | fps without filter init=47.59 |size=       0kB time=00:00:03.63 bitrate=   0.0kbits/s speed=0.485x    | profiling | total frame=120 fps=15.00 | fps without filter init=47.67 |size=       1kB time=00:00:04.77 bitrate=   1.0kbits/s speed=0.596x    | profiling | total frame=144 fps=16.94 | fps without filter init=47.71 |size=       1kB time=00:00:06.50 bitrate=   0.7kbits/s speed=0.765x    | profiling | total frame=168 fps=18.66 | fps without filter init=47.75 |size=       1kB time=00:00:07.30 bitrate=   0.7kbits/s speed=0.812x    [0;36m[h264 @ 0x3dad140] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mno frame!
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m    Last message repeated 1 times    Last message repeated 1 times
+[0;36m[h264 @ 0x3dad140] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mno frame!
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mMissing reference picture, default is 65538
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mco located POCs unavailable
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mMissing reference picture, default is 65538
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mco located POCs unavailable
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mMissing reference picture, default is 65546
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mno frame!
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m    Last message repeated 1 times    Last message repeated 1 times
+[0;36m[h264 @ 0x3d9f100] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mno frame!
+[0m| profiling | total frame=192 fps=20.21 | fps without filter init=47.77 |size=      10kB time=00:00:08.10 bitrate=  10.2kbits/s speed=0.853x    [1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mno frame!
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mMissing reference picture, default is 0
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mFailed to upload decode parameters: 18 (invalid parameter).
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mFailed to end picture decode after error: 18 (invalid parameter).
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mhardware accelerator failed to decode picture
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mMissing reference picture, default is 65542
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mMissing reference picture, default is 65542
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mMissing reference picture, default is 65542
+[0m[1;31mError while decoding stream #0:0: Input/output error
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mno frame!
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mMissing reference picture, default is 65548
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mMissing reference picture, default is 65548
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mMissing reference picture, default is 65554
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mno frame!
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mMissing reference picture, default is 65554
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m    Last message repeated 1 times    Last message repeated 1 times
+[0;36m[h264 @ 0x3de5d00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m| profiling | total frame=216 fps=21.59 | fps without filter init=47.79 |size=      15kB time=00:00:08.97 bitrate=  13.5kbits/s speed=0.897x    [0;36m[h264 @ 0x3de5d00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mno frame!
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m    Last message repeated 1 times    Last message repeated 1 times
+[0;36m[h264 @ 0x3de5d00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mno frame!
+[0m| profiling | total frame=241 fps=22.95 | fps without filter init=48.01 |size=      15kB time=00:00:10.84 bitrate=  11.2kbits/s speed=1.03x    [1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mno frame!
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m    Last message repeated 1 times    Last message repeated 1 times
+[0;36m[h264 @ 0x3dc9600] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m| profiling | total frame=350 fps=31.81 | fps without filter init=63.40 |size=      16kB time=00:00:14.81 bitrate=   8.8kbits/s speed=1.35x    [0;36m[h264 @ 0x3dc9600] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mno frame!
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m    Last message repeated 1 times    Last message repeated 1 times
+[0;36m[h264 @ 0x3dad140] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mno frame!
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m    Last message repeated 1 times    Last message repeated 1 times
+[0;36m[h264 @ 0x3dc9600] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m| profiling | total frame=482 fps=41.90 | fps without filter init=80.04 |size=      51kB time=00:00:19.48 bitrate=  21.5kbits/s speed=1.69x    [0;36m[h264 @ 0x3d4ba00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m| profiling | total frame=616 fps=51.31 | fps without filter init=94.44 |size=      53kB time=00:00:24.15 bitrate=  18.0kbits/s speed=2.01x    [0;36m[h264 @ 0x3dc9600] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m| profiling | total frame=748 fps=59.81 | fps without filter init=106.51 |size=      69kB time=00:00:28.59 bitrate=  19.8kbits/s speed=2.29x    [0;36m[h264 @ 0x3dad140] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m| profiling | total frame=878 fps=67.51 | fps without filter init=116.71 |size=      69kB time=00:00:32.96 bitrate=  17.2kbits/s speed=2.53x    | profiling | total frame=1010 fps=74.78 | fps without filter init=125.88 |size=      73kB time=00:00:37.40 bitrate=  15.9kbits/s speed=2.77x    [0;36m[h264 @ 0x3dc9600] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mno frame!
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m    Last message repeated 1 times    Last message repeated 1 times
+| profiling | total frame=1142 fps=81.53 | fps without filter init=133.97 |size=      86kB time=00:00:41.84 bitrate=  16.9kbits/s speed=2.99x    [0;36m[h264 @ 0x3d9f100] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mno frame!
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mno frame!
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mno frame!
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m    Last message repeated 1 times    Last message repeated 1 times
+[0;36m[h264 @ 0x3dc9600] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m    Last message repeated 1 times    Last message repeated 1 times
+[0;36m[h264 @ 0x3d9f100] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m    Last message repeated 1 times    Last message repeated 1 times
+[0;36m[h264 @ 0x3dad140] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m| profiling | total frame=1274 fps=87.82 | fps without filter init=141.17 |size=     101kB time=00:00:46.37 bitrate=  17.9kbits/s speed= 3.2x    [0;36m[h264 @ 0x3d9f100] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mno frame!
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m    Last message repeated 1 times    Last message repeated 1 times
+[0;36m[h264 @ 0x3de5d00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mno frame!
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mMissing reference picture, default is 0
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mFailed to upload decode parameters: 18 (invalid parameter).
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mFailed to end picture decode after error: 18 (invalid parameter).
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mhardware accelerator failed to decode picture
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mMissing reference picture, default is 65542
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mMissing reference picture, default is 65542
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mMissing reference picture, default is 65542
+[0m[1;31mError while decoding stream #0:0: Input/output error
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mMissing reference picture, default is 65548
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mno frame!
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mMissing reference picture, default is 65548
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mMissing reference picture, default is 65554
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mMissing reference picture, default is 65554
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mno frame!
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mMissing reference picture, default is 65548
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mMissing reference picture, default is 65548
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mMissing reference picture, default is 65554
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mno frame!
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m    Last message repeated 1 times    Last message repeated 1 times
+[0;36m[h264 @ 0x3de5d00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m| profiling | total frame=1399 fps=93.22 | fps without filter init=146.88 |size=     118kB time=00:00:51.95 bitrate=  18.6kbits/s speed=3.46x    [0;36m[h264 @ 0x3d9f100] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mno frame!
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m    Last message repeated 1 times    Last message repeated 1 times
+[0;36m[h264 @ 0x3d9f100] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m| profiling | total frame=1531 fps=98.72 | fps without filter init=152.71 |size=     123kB time=00:00:56.62 bitrate=  17.7kbits/s speed=3.65x    [0;36m[h264 @ 0x3de5d00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mno frame!
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mMissing reference picture, default is 65536
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mMissing reference picture, default is 65540
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mMissing reference picture, default is 65548
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mMissing reference picture, default is 65548
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mno frame!
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mno frame!
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mMissing reference picture, default is 65536
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mMissing reference picture, default is 65538
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mMissing reference picture, default is 65550
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mMissing reference picture, default is 65550
+[0m| profiling | total frame=1663 fps=103.88 | fps without filter init=157.99 |size=     133kB time=00:01:01.49 bitrate=  17.7kbits/s speed=3.84x    [0;36m[h264 @ 0x3d4ba00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mno frame!
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mMissing reference picture, default is 65542
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mMissing reference picture, default is 65542
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mMissing reference picture, default is 65548
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m| profiling | total frame=1783 fps=108.00 | fps without filter init=161.70 |size=     135kB time=00:01:05.53 bitrate=  16.9kbits/s speed=3.97x    [0;36m[h264 @ 0x3dc9600] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mno frame!
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m    Last message repeated 1 times    Last message repeated 1 times
+[0;36m[h264 @ 0x3dad140] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mno frame!
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mMissing reference picture, default is 65536
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mMissing reference picture, default is 65536
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mMissing reference picture, default is 65542
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mMissing reference picture, default is 65554
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mMissing reference picture, default is 65554
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mMissing reference picture, default is 65554
+[0m| profiling | total frame=1915 fps=112.58 | fps without filter init=166.13 |size=     149kB time=00:01:10.20 bitrate=  17.3kbits/s speed=4.13x    | profiling | total frame=2047 fps=116.90 | fps without filter init=170.18 |size=     149kB time=00:01:14.64 bitrate=  16.3kbits/s speed=4.26x    [0;36m[h264 @ 0x3dc9600] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m| profiling | total frame=2178 fps=120.92 | fps without filter init=173.84 |size=     185kB time=00:01:19.11 bitrate=  19.1kbits/s speed=4.39x    | profiling | total frame=2310 fps=124.78 | fps without filter init=177.29 |size=     185kB time=00:01:23.68 bitrate=  18.1kbits/s speed=4.52x    [0;36m[h264 @ 0x3d9f100] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mno frame!
+[0m| profiling | total frame=2436 fps=128.12 | fps without filter init=180.04 |size=     199kB time=00:01:27.88 bitrate=  18.5kbits/s speed=4.62x    [1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m| profiling | total frame=2572 fps=131.81 | fps without filter init=183.31 |size=     201kB time=00:01:32.65 bitrate=  17.8kbits/s speed=4.75x    | profiling | total frame=2696 fps=134.70 | fps without filter init=185.53 |size=     205kB time=00:01:36.79 bitrate=  17.3kbits/s speed=4.84x    [0;36m[h264 @ 0x3d4ba00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mno frame!
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mMissing reference picture, default is 65536
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mMissing reference picture, default is 65536
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mMissing reference picture, default is 65542
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mMissing reference picture, default is 65554
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mMissing reference picture, default is 65554
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mMissing reference picture, default is 65554
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m| profiling | total frame=2828 fps=137.85 | fps without filter init=188.13 |size=     218kB time=00:01:41.40 bitrate=  17.6kbits/s speed=4.94x    [0;36m[h264 @ 0x3d4ba00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mno frame!
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m    Last message repeated 1 times    Last message repeated 1 times
+[0;36m[h264 @ 0x3d9f100] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mno frame!
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mMissing reference picture, default is 0
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mFailed to upload decode parameters: 18 (invalid parameter).
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mFailed to end picture decode after error: 18 (invalid parameter).
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mhardware accelerator failed to decode picture
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mMissing reference picture, default is 65540
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mMissing reference picture, default is 65540
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mMissing reference picture, default is 65544
+[0m[1;31mError while decoding stream #0:0: Input/output error
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mMissing reference picture, default is 65544
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mno frame!
+[0m| profiling | total frame=2958 fps=140.75 | fps without filter init=190.44 |size=     226kB time=00:01:45.87 bitrate=  17.5kbits/s speed=5.04x    [0;36m[h264 @ 0x3dad140] [0m[1;31mMissing reference picture, default is 65548
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mno frame!
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m    Last message repeated 1 times    Last message repeated 1 times
+[0;36m[h264 @ 0x3dad140] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m| profiling | total frame=3092 fps=143.71 | fps without filter init=192.85 |size=     251kB time=00:01:51.47 bitrate=  18.4kbits/s speed=5.18x    [0;36m[h264 @ 0x3d4ba00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mno frame!
+[0m| profiling | total frame=3224 fps=146.43 | fps without filter init=194.99 |size=     251kB time=00:01:55.94 bitrate=  17.7kbits/s speed=5.27x    [1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3d4ba00] [0m[1;31mno frame!
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mMissing reference picture, default is 65536
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mMissing reference picture, default is 65540
+[0m[0;36m[h264 @ 0x3de5d00] [0m[1;31mMissing reference picture, default is 65548
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3d9f100] [0m[1;31mMissing reference picture, default is 65548
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dc9600] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mget_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mthread_get_buffer() failed
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mdecode_slice_header error
+[0m[0;36m[h264 @ 0x3dad140] [0m[1;31mno frame!
+[0m[1;31mError while decoding stream #0:0: Invalid data found when processing input
+[0m[1;32m[Parsed_detect_0 @ 0x4193fc0] [0mGet EOS.
+output:39 processed:0
+output:36 processed:3
+output:33 processed:5
+output:27 processed:10
+output:27 processed:9
+output:27 processed:8
+output:27 processed:7
+output:18 processed:15
+output:18 processed:14
+output:18 processed:13
+output:18 processed:12
+output:18 processed:11
+output:18 processed:10
+output:18 processed:9
+output:18 processed:8
+output:18 processed:7
+output:17 processed:7
+output:14 processed:9
+output:5 processed:17
+output:5 processed:16
+output:0 processed:20
+output:0 processed:19
+output:0 processed:18
+output:0 processed:17
+output:0 processed:16
+output:0 processed:15
+output:0 processed:14
+output:0 processed:13
+output:0 processed:12
+output:0 processed:11
+output:0 processed:10
+output:0 processed:9
+output:0 processed:8
+output:0 processed:7
+output:0 processed:6
+output:0 processed:5
+output:0 processed:4
+output:0 processed:3
+output:0 processed:2
+output:0 processed:1
+output:0 processed:0
+| profiling | total frame=3361 fps=148.62 | fps without filter init=196.18 |size=     267kB time=00:02:00.78 bitrate=  18.1kbits/s speed=5.34x    [1;32m[Parsed_classify_1 @ 0x4195700] [0mGet EOS.
+output:0 processed:0
+| profiling | total frame=3361 fps=148.62 | fps without filter init=196.18 |size=     267kB time=00:02:00.78 bitrate=  18.1kbits/s speed=5.34x    
+video:1759kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
+| filter profiling | name=detect, init=5154.52 ms, frame=3361, fps=1718.26
+[HDDLPlugin] [06:14:05.4924][11683]I[Dispatcher2.cpp:212] Info: Listen Thread wake up and to exit.
+[HDDLPlugin] [06:14:05.4925][11646]I[Dispatcher2.cpp:81] Info: Client dispatcher exit.
+[HDDLPlugin] [06:14:05.4927][11646]I[HddlClient.cpp:203] Info: Hddl client unregistered.
+[HDDLPlugin] [06:14:05.5946][11742]I[Dispatcher2.cpp:212] Info: Listen Thread wake up and to exit.
+[HDDLPlugin] [06:14:05.5947][11646]I[Dispatcher2.cpp:81] Info: Client dispatcher exit.
+[HDDLPlugin] [06:14:05.5948][11646]I[HddlClient.cpp:203] Info: Hddl client unregistered.
+]0;root@vca_node_00: ~root@vca_node_00:~# [K
